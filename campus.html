@@ -2372,6 +2372,27 @@ body.dark .copyright {
     color: #94a3b8 !important;
     background: #020617 !important;
 }
+
+.quiz-wrap{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quiz-options{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.quiz-option{
+    min-height: 72px;
+    padding: 1rem;
+}
+
+@media (max-width: 768px){
+    .quiz-options{
+        grid-template-columns: 1fr;
+    }
+}
     </style>
   </head>
   <body>
@@ -3321,38 +3342,57 @@ body.dark .copyright {
             recommendation.
           </p>
           <div class="quiz-wrap">
-            <div class="quiz-q" id="quizQuestion">
-              What excites you most about college?
-            </div>
-            <div class="quiz-options" id="quizOptions">
-              <button class="quiz-option" onclick="selectQuiz(this, 'tech')">
-                <i class="fas fa-code"></i> Building apps & solving problems
-              </button>
-              <button
-                class="quiz-option"
-                onclick="selectQuiz(this, 'security')"
-              >
-                <i class="fas fa-lock"></i> Hacking & cybersecurity
-              </button>
-              <button class="quiz-option" onclick="selectQuiz(this, 'design')">
-                <i class="fas fa-palette"></i> Design, art & creativity
-              </button>
-              <button class="quiz-option" onclick="selectQuiz(this, 'social')">
-                <i class="fas fa-comments"></i> Debating & meeting people
-              </button>
-              <button class="quiz-option" onclick="selectQuiz(this, 'culture')">
-                <i class="fas fa-music"></i> Music, dance & culture
-              </button>
-              <button class="quiz-option" onclick="selectQuiz(this, 'sports')">
-                <i class="fas fa-dumbbell"></i> Sports & physical activities
-              </button>
-            </div>
-            <div class="quiz-result" id="quizResult">
-              <div class="quiz-result-title" id="quizResultTitle"></div>
-              <div class="quiz-result-desc" id="quizResultDesc"></div>
-            </div>
-          </div>
-        </div>
+  <div class="quiz-q" id="quizQuestion">
+    What excites you most about college?
+  </div>
+
+  <div class="quiz-options" id="quizOptions">
+    <button class="quiz-option" onclick="selectQuiz(this, 'coding')">
+      <i class="fas fa-code"></i>
+      Building projects & solving problems
+    </button>
+
+    <button class="quiz-option" onclick="selectQuiz(this, 'media')">
+      <i class="fas fa-camera"></i>
+      Photography, videography & content creation
+    </button>
+
+    <button class="quiz-option" onclick="selectQuiz(this, 'dance')">
+      <i class="fas fa-person-dancing"></i>
+      Dance, performances & stage events
+    </button>
+
+    <button class="quiz-option" onclick="selectQuiz(this, 'music')">
+      <i class="fas fa-music"></i>
+      Singing, instruments & music
+    </button>
+
+    <button class="quiz-option" onclick="selectQuiz(this, 'sports')">
+      <i class="fas fa-football"></i>
+      Sports, fitness & competitions
+    </button>
+
+    <button class="quiz-option" onclick="selectQuiz(this, 'leadership')">
+      <i class="fas fa-users"></i>
+      Leadership, organizing events & helping students
+    </button>
+
+    <button class="quiz-option" onclick="selectQuiz(this, 'support')">
+      <i class="fas fa-headset"></i>
+      Supporting events & solving practical challenges
+    </button>
+
+    <button class="quiz-option" onclick="selectQuiz(this, 'innovation')">
+      <i class="fas fa-lightbulb"></i>
+      Technology, innovation & learning new skills
+    </button>
+  </div>
+
+  <div class="quiz-result" id="quizResult">
+    <div class="quiz-result-title" id="quizResultTitle"></div>
+    <div class="quiz-result-desc" id="quizResultDesc"></div>
+  </div>
+</div>
       </div>
       <section id="campus-life" class="section">
         <div class="section-inner">
@@ -4653,32 +4693,48 @@ body.dark .copyright {
 
       // ─── CLUB QUIZ ───
       const quizMap = {
-        tech: {
-          title: "Chakravyuha Technical Club",
-          desc: "You thrive on building and problem-solving. Chakravyuha is your home — hackathons, build challenges, and a strong community of developers and engineers await you.",
-        },
-        security: {
-          title: "CyberSec Club",
-          desc: "Your curiosity about how systems break makes you a natural fit for the cybersecurity community. CTF competitions and ethical hacking workshops will challenge and grow you rapidly.",
-        },
-        design: {
-          title: "Design & Creative Arts Club",
-          desc: "You see the world visually and creatively. The Design Club works on real UI/UX projects, event branding, and photography — perfect for someone who thinks aesthetically.",
-        },
-        social: {
-          title: "Debate & Literary Society",
-          desc: "Your strength is ideas and articulation. The Literary Society will sharpen your critical thinking through debates, Model UN, and public speaking — skills that pay dividends for life.",
-        },
-        culture: {
-          title: "Music & Cultural Club",
-          desc: "You bring energy and creativity to everything. The Cultural Club runs the biggest events on campus — a stage where your passion for performance truly shines.",
-        },
-        sports: {
-          title: "Sports Council",
-          desc: "You belong on the field. The Sports Council competes at university level across multiple disciplines and builds camaraderie that academic settings rarely can.",
-        },
-      };
 
+  coding: {
+    title: "Chakravyuha Technical Club",
+    desc: "You enjoy building projects, coding, hackathons, and solving challenging problems. Chakravyuha is the perfect place to learn, compete, and grow."
+  },
+
+  media: {
+    title: "Drishya – Media Club",
+    desc: "You have an eye for creativity and storytelling. Drishya lets you explore photography, videography, content creation, and event coverage."
+  },
+
+  dance: {
+    title: "Nritya Sparsh – Dance Club",
+    desc: "You love performing, expressing yourself through movement, and being on stage. Nritya Sparsh is your ideal community."
+  },
+
+  music: {
+    title: "Saptawara – Music Club",
+    desc: "Whether you sing or play instruments, Saptawara gives you opportunities to perform, collaborate, and grow as a musician."
+  },
+
+  sports: {
+    title: "Avishrutha – Sports Club",
+    desc: "Competition, teamwork, and fitness motivate you. Avishrutha provides the perfect environment to excel in sports and athletics."
+  },
+
+  support: {
+    title: "Aadvika – Tech & Support Club",
+    desc: "You enjoy helping teams succeed behind the scenes. Aadvika focuses on technical support, event execution, and practical problem-solving."
+  },
+
+  innovation: {
+    title: "Prachurya – Tech Club",
+    desc: "You are curious about emerging technologies and innovation. Prachurya helps you develop technical skills through projects and workshops."
+  },
+
+  leadership: {
+    title: "Student Council",
+    desc: "You naturally take initiative, lead teams, and want to make a difference on campus. The Student Council is the right platform for you."
+  }
+
+};
       function selectQuiz(btn, type) {
         document
           .querySelectorAll(".quiz-option")
