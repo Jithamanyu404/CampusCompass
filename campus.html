@@ -1,0 +1,4722 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Compass — Amrita Vishwa Vidyapeetham, Amaravati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <script>
+      // Detect if Font Awesome loaded; if not, insert inline SVG replacements
+      window.addEventListener("load", function () {
+        var testEl = document.createElement("span");
+        testEl.className = "fas fa-check";
+        testEl.style.cssText =
+          "position:absolute;visibility:hidden;font-family:FontAwesome";
+        document.body.appendChild(testEl);
+        var w = testEl.offsetWidth;
+        document.body.removeChild(testEl);
+        if (w === 0) {
+          // Font Awesome didn't load — apply text fallbacks
+          document
+            .querySelectorAll("i.fas,i.far,i.fab,i.fa")
+            .forEach(function (el) {
+              var cls = el.className;
+              var map = {
+                "fa-compass": "🧭",
+                "fa-graduation-cap": "🎓",
+                "fa-users": "👥",
+                "fa-building": "🏢",
+                "fa-kit-medical": "🩺",
+                "fa-toolbox": "🧰",
+                "fa-circle-question": "❓",
+                "fa-code": "💻",
+                "fa-robot": "🤖",
+                "fa-shield-halved": "🛡",
+                "fa-pen-nib": "✏️",
+                "fa-microphone-lines": "🎤",
+                "fa-music": "🎵",
+                "fa-leaf": "🌿",
+                "fa-futbol": "⚽",
+                "fa-book-open": "📖",
+                "fa-calendar-alt": "📅",
+                "fa-calendar-check": "✅",
+                "fa-triangle-exclamation": "⚠️",
+                "fa-circle-dot": "•",
+                "fa-check": "✓",
+                "fa-check-circle": "✓",
+                "fa-xmark": "✗",
+                "fa-star": "⭐",
+                "fa-lock": "🔒",
+                "fa-palette": "🎨",
+                "fa-comments": "💬",
+                "fa-dumbbell": "💪",
+                "fa-id-card": "🪪",
+                "fa-clock": "⏰",
+                "fa-bell": "🔔",
+                "fa-laptop": "💻",
+                "fa-sun": "☀️",
+                "fa-utensils": "🍴",
+                "fa-location-dot": "📍",
+                "fa-bus": "🚌",
+                "fa-brain": "🧠",
+                "fa-server": "🖥",
+                "fa-envelope": "✉️",
+                "fa-play-circle": "▶️",
+                "fa-trophy": "🏆",
+                "fa-certificate": "📜",
+                "fa-question-circle": "❓",
+                "fa-database": "🗄",
+                "fa-file-code": "📄",
+                "fa-note-sticky": "📝",
+                "fa-diagram-project": "📊",
+                "fa-paper-plane": "✈️",
+                "fa-calculator": "🔢",
+                "fa-box": "📦",
+                "fa-calendar-day": "📅",
+                "fa-file-alt": "📄",
+                "fa-users-gear": "⚙️",
+                "fa-calendar-star": "⭐",
+                "fa-file-signature": "📝",
+                "fa-person-chalkboard": "👨‍🏫",
+                "fa-medal": "🏅",
+                "fa-heart-pulse": "❤️",
+                "fa-phone": "📞",
+                "fa-map-marker-alt": "📍",
+                "fa-circle-check": "✅",
+                "fa-circle-xmark": "❌",
+                "fa-bars": "☰",
+                "fa-chevron-down": "∨",
+                "fa-arrow-right": "→",
+                "fa-github": "GH",
+                "fa-git-alt": "GIT",
+                "fa-python": "PY",
+                "fa-chart-line": "📈",
+                "fa-book": "📚",
+                "fa-circle": "●",
+                "fa-external-link": "↗",
+                "fa-minus": "−",
+                "fa-plus": "+",
+              };
+              for (var key in map) {
+                if (cls.indexOf(key) !== -1) {
+                  el.textContent = map[key];
+                  el.style.fontFamily = "inherit";
+                  el.style.fontStyle = "normal";
+                  break;
+                }
+              }
+            });
+        }
+      });
+    </script>
+    <style>
+      :root {
+        --pink-50: #fff0f5;
+        --pink-100: #ffd6e7;
+        --pink-200: #ffadd0;
+        --pink-300: #f57baa;
+        --pink-400: #e8538d;
+        --pink-500: #d63074;
+        --pink-600: #b5235d;
+        --pink-700: #8c1a47;
+        --white: #ffffff;
+        --gray-50: #fafafa;
+        --gray-100: #f5f5f5;
+        --gray-200: #ebebeb;
+        --gray-300: #d4d4d4;
+        --gray-400: #a3a3a3;
+        --gray-500: #737373;
+        --gray-600: #525252;
+        --gray-700: #404040;
+        --gray-800: #262626;
+        --gray-900: #171717;
+        --font-display: "Playfair Display", Georgia, serif;
+        --font-body: "DM Sans", system-ui, sans-serif;
+        --font-mono: "DM Mono", monospace;
+        --radius-sm: 6px;
+        --radius-md: 10px;
+        --radius-lg: 16px;
+        --radius-xl: 24px;
+        --shadow-sm:
+          0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+        --shadow-md:
+          0 4px 16px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.05);
+        --shadow-lg:
+          0 12px 40px rgba(0, 0, 0, 0.09), 0 4px 12px rgba(0, 0, 0, 0.06);
+        --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+
+      body {
+        font-family: var(--font-body);
+        color: var(--gray-800);
+        background: var(--white);
+        line-height: 1.65;
+        overflow-x: hidden;
+      }
+
+      /* ─── NAVBAR ─── */
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--pink-100);
+        padding: 0 2.5rem;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 20px rgba(214, 48, 116, 0.06);
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--gray-900);
+        flex-shrink: 0;
+      }
+
+      .nav-logo {
+        width: 38px;
+        height: 38px;
+        background: linear-gradient(135deg, var(--pink-400), var(--pink-600));
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        box-shadow: 0 4px 12px rgba(214, 48, 116, 0.3);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .nav-brand:hover .nav-logo {
+        transform: rotate(-8deg) scale(1.08);
+        box-shadow: 0 6px 18px rgba(214, 48, 116, 0.4);
+      }
+
+      .nav-brand-text {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 1.15rem;
+        letter-spacing: -0.02em;
+        background: linear-gradient(
+          135deg,
+          var(--gray-900) 40%,
+          var(--pink-500)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ─── NAV LINKS ─── */
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        list-style: none;
+      }
+
+      .nav-item {
+        position: relative;
+      }
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        text-decoration: none;
+        color: var(--gray-600);
+        font-size: 0.875rem;
+        font-weight: 500;
+        padding: 0.5rem 0.85rem;
+        border-radius: var(--radius-sm);
+        transition: color 0.2s ease;
+        position: relative;
+        white-space: nowrap;
+      }
+
+      /* animated underline */
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        right: 50%;
+        height: 2px;
+        background: var(--pink-400);
+        border-radius: 2px;
+        transition:
+          left 0.25s ease,
+          right 0.25s ease;
+      }
+
+      .nav-item:hover > .nav-link::after,
+      .nav-link.active::after {
+        left: 0.85rem;
+        right: 0.85rem;
+      }
+
+      .nav-item:hover > .nav-link,
+      .nav-link.active {
+        color: var(--pink-600);
+      }
+
+      .nav-link .nav-chevron {
+        font-size: 0.65rem;
+        transition: transform 0.25s ease;
+        color: var(--gray-400);
+      }
+
+      .nav-item:hover > .nav-link .nav-chevron {
+        transform: rotate(180deg);
+        color: var(--pink-400);
+      }
+
+      /* ─── DROPDOWN ─── */
+      .nav-dropdown {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%) translateY(-6px);
+        background: white;
+        border: 1px solid var(--pink-100);
+        border-radius: var(--radius-lg);
+        box-shadow:
+          0 16px 48px rgba(0, 0, 0, 0.12),
+          0 4px 16px rgba(214, 48, 116, 0.08);
+        min-width: 220px;
+        padding: 0.5rem;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+          opacity 0.2s ease,
+          transform 0.25s ease,
+          visibility 0.2s;
+        z-index: 999;
+      }
+
+      /* arrow pointer */
+      .nav-dropdown::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12px;
+        height: 12px;
+        background: white;
+        border-top: 1px solid var(--pink-100);
+        border-left: 1px solid var(--pink-100);
+        transform: translateX(-50%) rotate(45deg);
+      }
+
+      .nav-item:hover .nav-dropdown {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .nav-dropdown-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0.6rem 0.75rem;
+        border-radius: var(--radius-sm);
+        text-decoration: none;
+        color: var(--gray-700);
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition:
+          background 0.15s ease,
+          color 0.15s ease,
+          transform 0.15s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .nav-dropdown-item:hover {
+        background: var(--pink-50);
+        color: var(--pink-600);
+        transform: translateX(3px);
+      }
+
+      .nav-dropdown-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        background: var(--pink-50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        color: var(--pink-500);
+        flex-shrink: 0;
+        transition: background 0.15s ease;
+      }
+
+      .nav-dropdown-item:hover .nav-dropdown-icon {
+        background: var(--pink-100);
+      }
+
+      .nav-dropdown-label {
+        line-height: 1.3;
+      }
+      .nav-dropdown-sub {
+        font-size: 0.72rem;
+        color: var(--gray-400);
+        font-weight: 400;
+        display: block;
+      }
+
+      .nav-dropdown-divider {
+        height: 1px;
+        background: var(--pink-100);
+        margin: 0.35rem 0.5rem;
+      }
+
+      /* staggered item animation on hover */
+      .nav-dropdown-item {
+        animation: none;
+      }
+      .nav-item:hover .nav-dropdown-item:nth-child(1) {
+        transition-delay: 0.02s;
+      }
+      .nav-item:hover .nav-dropdown-item:nth-child(2) {
+        transition-delay: 0.04s;
+      }
+      .nav-item:hover .nav-dropdown-item:nth-child(3) {
+        transition-delay: 0.06s;
+      }
+      .nav-item:hover .nav-dropdown-item:nth-child(4) {
+        transition-delay: 0.08s;
+      }
+      .nav-item:hover .nav-dropdown-item:nth-child(5) {
+        transition-delay: 0.1s;
+      }
+
+      /* ─── NAV CTA ─── */
+      .nav-cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: linear-gradient(135deg, var(--pink-400), var(--pink-600));
+        color: white !important;
+        text-decoration: none;
+        padding: 0.5rem 1.1rem;
+        border-radius: 100px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        box-shadow: 0 4px 14px rgba(214, 48, 116, 0.28);
+        white-space: nowrap;
+        margin-left: 0.5rem;
+      }
+
+      .nav-cta-btn:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 8px 22px rgba(214, 48, 116, 0.38);
+      }
+
+      .nav-cta-btn i {
+        font-size: 0.8rem;
+      }
+
+      /* active section highlight */
+      .nav-link.section-active {
+        color: var(--pink-600);
+      }
+      .nav-link.section-active::after {
+        left: 0.85rem;
+        right: 0.85rem;
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      /* ─── HERO ─── */
+      .hero {
+        padding: 120px 2rem 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--pink-50);
+        border: 1px solid var(--pink-200);
+        color: var(--pink-600);
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 0.35rem 0.85rem;
+        border-radius: 100px;
+        margin-bottom: 1.25rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        font-weight: 700;
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        color: var(--gray-900);
+        margin-bottom: 1.25rem;
+      }
+
+      .hero h1 span {
+        color: var(--pink-500);
+      }
+
+      .hero-sub {
+        font-size: 1.05rem;
+        color: var(--gray-500);
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        max-width: 480px;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--pink-500);
+        color: white;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(214, 48, 116, 0.3);
+      }
+
+      .btn-primary:hover {
+        background: var(--pink-600);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(214, 48, 116, 0.35);
+      }
+
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--gray-700);
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius-md);
+        font-weight: 500;
+        font-size: 0.95rem;
+        border: 1px solid var(--gray-300);
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .btn-outline:hover {
+        border-color: var(--pink-300);
+        color: var(--pink-600);
+        background: var(--pink-50);
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--gray-200);
+      }
+
+      .hero-stat-num {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--gray-900);
+        line-height: 1;
+      }
+
+      .hero-stat-label {
+        font-size: 0.8rem;
+        color: var(--gray-400);
+        margin-top: 4px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      /* Hero visual */
+      .hero-visual {
+        position: relative;
+      }
+
+      .hero-card-main {
+        background: var(--white);
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-xl);
+        padding: 2rem;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--gray-100);
+      }
+
+      .avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--pink-300), var(--pink-500));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+
+      .hero-card-header div p:first-child {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--gray-800);
+      }
+
+      .hero-card-header div p:last-child {
+        font-size: 0.8rem;
+        color: var(--gray-400);
+      }
+
+      .checklist {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .checklist li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        color: var(--gray-600);
+      }
+
+      .check-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--pink-500);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 0.6rem;
+        color: white;
+      }
+
+      .check-icon.gray {
+        background: var(--gray-200);
+        color: var(--gray-400);
+      }
+
+      .floating-card {
+        position: absolute;
+        background: white;
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-lg);
+        padding: 0.85rem 1rem;
+        box-shadow: var(--shadow-md);
+        z-index: 3;
+      }
+
+      .floating-card-1 {
+        bottom: -20px;
+        right: -20px;
+        min-width: 160px;
+      }
+
+      .floating-card-2 {
+        top: -16px;
+        right: -16px;
+        min-width: 130px;
+      }
+
+      .fc-label {
+        font-size: 0.7rem;
+        color: var(--gray-400);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 4px;
+      }
+
+      .fc-value {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--gray-900);
+      }
+
+      .fc-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #22c55e;
+        display: inline-block;
+        margin-right: 5px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+
+      /* ─── SECTION BASE ─── */
+      .section {
+        padding: 80px 2rem;
+      }
+
+      .section-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--pink-500);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+      }
+
+      .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        font-weight: 700;
+        color: var(--gray-900);
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+      }
+
+      .section-sub {
+        font-size: 1rem;
+        color: var(--gray-500);
+        max-width: 540px;
+        line-height: 1.7;
+        margin-bottom: 3rem;
+      }
+
+      /* ─── ALTERNATING BG ─── */
+      .section-alt {
+        background: var(--gray-50);
+      }
+      .section-pink {
+        background: var(--pink-50);
+      }
+
+      /* ─── CARD GRID ─── */
+      .card-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+      .card-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+      .card-grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+
+      .card {
+        background: var(--white);
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        transition: var(--transition);
+      }
+
+      .card:hover {
+        border-color: var(--pink-200);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+      }
+
+      .card-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-md);
+        background: var(--pink-50);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: var(--pink-500);
+        margin-bottom: 1rem;
+      }
+
+      .card-icon.dark {
+        background: var(--gray-900);
+        color: white;
+      }
+
+      .card h3 {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--gray-900);
+        margin-bottom: 0.5rem;
+      }
+
+      .card p {
+        font-size: 0.88rem;
+        color: var(--gray-500);
+        line-height: 1.65;
+      }
+
+      /* ─── DIVIDER ─── */
+      .divider {
+        width: 48px;
+        height: 3px;
+        background: var(--pink-400);
+        border-radius: 2px;
+        margin-bottom: 2rem;
+      }
+      .download-guide {
+        text-align: center;
+        padding: 40px;
+        background: var(--pink-50);
+        border-radius: 24px;
+        margin: 40px auto;
+      }
+
+      .download-guide h3 {
+        margin-bottom: 10px;
+      }
+
+      .download-guide p {
+        margin-bottom: 20px;
+      }
+      /* ─── ACADEMIC SECTION ─── */
+      .branch-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .branch-card {
+        background: white;
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-lg);
+        padding: 1.25rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        transition: var(--transition);
+      }
+
+      .branch-card:hover {
+        border-color: var(--pink-300);
+        background: var(--pink-50);
+      }
+
+      .branch-num {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--pink-400);
+        font-weight: 500;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+
+      .branch-name {
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--gray-800);
+        margin-bottom: 3px;
+      }
+
+      .branch-code {
+        font-size: 0.78rem;
+        color: var(--gray-400);
+        font-family: var(--font-mono);
+      }
+
+      .info-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .info-block {
+        background: white;
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+      }
+
+      .info-block h4 {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--gray-900);
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--gray-100);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .info-block h4 i {
+        color: var(--pink-500);
+      }
+
+      .info-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .info-list li {
+        font-size: 0.875rem;
+        color: var(--gray-600);
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid var(--gray-100);
+      }
+
+      .info-list li:last-child {
+        border-bottom: none;
+      }
+
+      .info-list li i {
+        color: var(--pink-400);
+        flex-shrink: 0;
+        margin-top: 2px;
+        font-size: 0.85rem;
+      }
+
+      /* ─── EXAM PATTERN ─── */
+      .exam-blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .exam-card {
+        border-radius: var(--radius-lg);
+        padding: 1.75rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .exam-card.cia {
+        background: var(--pink-50);
+        border: 1px solid var(--pink-200);
+      }
+
+      .exam-card.ese {
+        background: var(--gray-900);
+        border: none;
+      }
+
+      .exam-card.ese .exam-title {
+        color: white;
+      }
+      .exam-card.ese .exam-weight {
+        color: var(--pink-300);
+      }
+      .exam-card.ese .exam-item {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .exam-card.ese .exam-item i {
+        color: var(--pink-300);
+      }
+
+      .exam-weight {
+        font-family: var(--font-mono);
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: var(--pink-500);
+        line-height: 1;
+        margin-bottom: 0.25rem;
+      }
+
+      .exam-title {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--gray-900);
+        margin-bottom: 1rem;
+      }
+
+      .exam-items {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .exam-item {
+        font-size: 0.85rem;
+        color: var(--gray-600);
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .exam-item i {
+        color: var(--pink-400);
+        font-size: 0.8rem;
+      }
+
+      /* ─── CLUBS ─── */
+      .club-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .club-card {
+        background: white;
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .club-card:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+      }
+
+      .club-card.featured {
+        border-color: var(--pink-300);
+        background: linear-gradient(135deg, var(--pink-50) 0%, white 60%);
+      }
+
+      .featured-tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: var(--pink-500);
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 0.3rem 0.75rem;
+        border-bottom-left-radius: var(--radius-md);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .club-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .club-name {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--gray-900);
+        margin-bottom: 0.35rem;
+      }
+
+      .club-desc {
+        font-size: 0.85rem;
+        color: var(--gray-500);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .club-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+
+      .tag {
+        font-size: 0.72rem;
+        font-weight: 600;
+        padding: 0.25rem 0.6rem;
+        border-radius: 100px;
+        background: var(--gray-100);
+        color: var(--gray-600);
+        letter-spacing: 0.02em;
+      }
+
+      .tag.pink {
+        background: var(--pink-100);
+        color: var(--pink-700);
+      }
+
+      /* ─── HOSTEL / DAILY ROUTINE ─── */
+      .timeline {
+        position: relative;
+        padding-left: 2.5rem;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--pink-200);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: -2.5rem;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--pink-500);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 0.6rem;
+        z-index: 1;
+      }
+
+      .timeline-time {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--pink-500);
+        font-weight: 500;
+        margin-bottom: 3px;
+      }
+
+      .timeline-event {
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--gray-800);
+        margin-bottom: 3px;
+      }
+
+      .timeline-detail {
+        font-size: 0.82rem;
+        color: var(--gray-400);
+      }
+
+      /* ─── SURVIVAL KIT ─── */
+      .dos-donts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      .dos-col {
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+      }
+
+      .donts-col {
+        background: #fff1f2;
+        border: 1px solid #fecdd3;
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+      }
+
+      .dd-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .dos-col .dd-header {
+        color: #166534;
+      }
+      .donts-col .dd-header {
+        color: #9f1239;
+      }
+
+      .dd-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+
+      .dd-list li {
+        font-size: 0.875rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .dd-list li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .dos-col .dd-list li {
+        color: #14532d;
+      }
+      .donts-col .dd-list li {
+        color: #881337;
+      }
+      .dos-col .dd-list li i {
+        color: #22c55e;
+      }
+      .donts-col .dd-list li i {
+        color: #f43f5e;
+      }
+
+      /* ─── TOOLS & RESOURCES ─── */
+      .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .resource-card {
+        background: white;
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-lg);
+        padding: 1.25rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        transition: var(--transition);
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .resource-card:hover {
+        border-color: var(--pink-300);
+        box-shadow: var(--shadow-sm);
+        transform: translateY(-1px);
+      }
+
+      .resource-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+        background: var(--pink-50);
+        color: var(--pink-500);
+      }
+
+      .resource-name {
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--gray-800);
+        margin-bottom: 3px;
+      }
+
+      .resource-desc {
+        font-size: 0.8rem;
+        color: var(--gray-400);
+        line-height: 1.5;
+      }
+
+      /* ─── TIPS TICKER ─── */
+      .ticker-wrap {
+        background: var(--gray-900);
+        overflow: hidden;
+        padding: 0.75rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .ticker-inner {
+        display: flex;
+        gap: 0;
+        animation: ticker 40s linear infinite;
+        white-space: nowrap;
+      }
+
+      .ticker-inner:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes ticker {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .ticker-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 2.5rem;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .ticker-item i {
+        color: var(--pink-300);
+      }
+
+      .ticker-sep {
+        color: var(--pink-500);
+        padding: 0 0.5rem;
+      }
+
+      /* ─── FAQ ─── */
+      .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+      }
+
+      .faq-item {
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .faq-item:last-child {
+        border-bottom: none;
+      }
+
+      .faq-q {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.1rem 1.5rem;
+        cursor: pointer;
+        transition: var(--transition);
+        background: white;
+        user-select: none;
+      }
+
+      .faq-q:hover {
+        background: var(--pink-50);
+      }
+
+      .faq-q span {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--gray-800);
+      }
+
+      .faq-q i {
+        color: var(--pink-400);
+        transition: transform 0.25s ease;
+        flex-shrink: 0;
+        font-size: 0.9rem;
+      }
+
+      .faq-item.open .faq-q i {
+        transform: rotate(180deg);
+      }
+
+      .faq-a {
+        display: none;
+        padding: 0 1.5rem 1.1rem;
+        font-size: 0.875rem;
+        color: var(--gray-500);
+        line-height: 1.7;
+        background: var(--pink-50);
+      }
+
+      .faq-item.open .faq-a {
+        display: block;
+      }
+
+      /* ─── CLUB QUIZ ─── */
+      .quiz-wrap {
+        background: white;
+        border: 1px solid var(--gray-200);
+        border-radius: var(--radius-xl);
+        padding: 2rem;
+        max-width: 640px;
+      }
+
+      .quiz-q {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--gray-900);
+        margin-bottom: 1.25rem;
+      }
+
+      .quiz-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .quiz-option {
+        padding: 0.75rem 1rem;
+        border: 1.5px solid var(--gray-200);
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--gray-700);
+        transition: var(--transition);
+        background: white;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .quiz-option:hover {
+        border-color: var(--pink-300);
+        background: var(--pink-50);
+        color: var(--pink-700);
+      }
+
+      .quiz-option.selected {
+        border-color: var(--pink-500);
+        background: var(--pink-50);
+        color: var(--pink-700);
+      }
+
+      .quiz-result {
+        display: none;
+        background: var(--pink-50);
+        border: 1px solid var(--pink-200);
+        border-radius: var(--radius-lg);
+        padding: 1.25rem;
+        margin-top: 1rem;
+      }
+
+      .quiz-result.show {
+        display: block;
+      }
+
+      .quiz-result-title {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--pink-700);
+        margin-bottom: 0.4rem;
+      }
+
+      .quiz-result-desc {
+        font-size: 0.875rem;
+        color: var(--gray-600);
+      }
+
+      /* ─── FIRST MONTH TIMELINE ─── */
+      .month-timeline {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        position: relative;
+      }
+
+      .month-timeline::before {
+        content: "";
+        position: absolute;
+        top: 24px;
+        left: 12.5%;
+        right: 12.5%;
+        height: 2px;
+        background: var(--pink-200);
+        z-index: 0;
+      }
+
+      .week-block {
+        text-align: center;
+        padding: 0 0.75rem;
+        position: relative;
+      }
+
+      .week-dot {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: white;
+        border: 2px solid var(--pink-300);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        position: relative;
+        z-index: 1;
+        font-size: 1.1rem;
+        color: var(--pink-500);
+        transition: var(--transition);
+      }
+
+      .week-block:hover .week-dot {
+        background: var(--pink-500);
+        color: white;
+        border-color: var(--pink-500);
+      }
+
+      .week-label {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--pink-500);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 0.4rem;
+      }
+
+      .week-title {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--gray-800);
+        margin-bottom: 0.5rem;
+      }
+
+      .week-items {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .week-items li {
+        font-size: 0.78rem;
+        color: var(--gray-500);
+      }
+
+      /* ─── FOOTER ─── */
+      .footer {
+        background: var(--gray-900);
+        color: rgba(255, 255, 255, 0.6);
+        padding: 3rem 2rem 2rem;
+      }
+
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 1rem;
+      }
+
+      .footer-logo {
+        width: 32px;
+        height: 32px;
+        background: var(--pink-500);
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 0.9rem;
+      }
+
+      .footer-brand-text {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+      }
+
+      .footer-about {
+        font-size: 0.83rem;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      .footer-col h5 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.8);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 1rem;
+      }
+
+      .footer-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .footer-col ul a {
+        text-decoration: none;
+        font-size: 0.83rem;
+        color: rgba(255, 255, 255, 0.45);
+        transition: var(--transition);
+      }
+
+      .footer-col ul a:hover {
+        color: var(--pink-300);
+      }
+
+      .footer-bottom {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.3);
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .footer-bottom span {
+        color: var(--pink-400);
+      }
+
+      /* ─── RESPONSIVE ─── */
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding-top: 100px;
+        }
+        .hero-visual {
+          display: none;
+        }
+        .card-grid-2,
+        .exam-blocks,
+        .dos-donts,
+        .info-row {
+          grid-template-columns: 1fr;
+        }
+        .card-grid-3,
+        .card-grid-4 {
+          grid-template-columns: 1fr 1fr;
+        }
+        .month-timeline {
+          grid-template-columns: 1fr 1fr;
+        }
+        .month-timeline::before {
+          display: none;
+        }
+        .footer-inner {
+          grid-template-columns: 1fr 1fr;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hamburger {
+          display: block;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .card-grid-3,
+        .card-grid-4 {
+          grid-template-columns: 1fr;
+        }
+        .quiz-options {
+          grid-template-columns: 1fr;
+        }
+        .month-timeline {
+          grid-template-columns: 1fr;
+        }
+        .footer-inner {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .section {
+          padding: 60px 1.25rem;
+        }
+      }
+
+      /* ─── SCROLL ANIMATIONS ─── */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease;
+      }
+
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ─── PROGRESS BAR ─── */
+      .progress-bar-wrap {
+        background: var(--gray-100);
+        border-radius: 100px;
+        height: 8px;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+      }
+
+      .progress-bar {
+        height: 100%;
+        border-radius: 100px;
+        background: linear-gradient(90deg, var(--pink-400), var(--pink-600));
+        transition: width 1s ease;
+      }
+
+      .cgpa-row {
+        margin-bottom: 1rem;
+      }
+
+      .cgpa-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.82rem;
+        color: var(--gray-600);
+        margin-bottom: 5px;
+      }
+
+      /* ─── CHIPS ─── */
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: var(--gray-100);
+        color: var(--gray-600);
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 0.25rem 0.65rem;
+        border-radius: 100px;
+      }
+
+      .chip.pink {
+        background: var(--pink-100);
+        color: var(--pink-700);
+      }
+
+      /* nav mobile drawer */
+      .nav-drawer {
+        display: none;
+        background: white;
+        border-bottom: 1px solid var(--gray-200);
+        padding: 1rem 2rem;
+        z-index: 999;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .nav-drawer.open {
+        display: flex;
+      }
+
+      .nav-drawer a {
+        text-decoration: none;
+        color: var(--gray-700);
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.6rem 0.5rem;
+        border-bottom: 1px solid var(--gray-100);
+        transition: var(--transition);
+      }
+
+      .nav-drawer a:hover {
+        color: var(--pink-600);
+      }
+      .nav-drawer a:last-child {
+        border-bottom: none;
+      }
+      .theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.3rem;
+        padding: 8px;
+        border-radius: 10px;
+      }
+
+      .theme-toggle:hover {
+        background: var(--pink-50);
+      }
+
+      .tour-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+      }
+
+      .tour-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid var(--gray-200);
+        transition: 0.3s;
+      }
+
+      .tour-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .tour-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .tour-card h3 {
+        padding: 18px 18px 8px;
+        font-family: var(--font-display);
+      }
+
+      .tour-card p {
+        padding: 0 18px 18px;
+        color: var(--gray-500);
+        font-size: 0.9rem;
+      }
+
+      .mess-timings {
+        margin-top: 20px;
+        background: var(--pink-50);
+        border: 1px solid var(--pink-200);
+        border-radius: 16px;
+        padding: 15px;
+      }
+
+      .mess-timings h5 {
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+        color: var(--pink-700);
+      }
+
+      .timing-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--pink-100);
+        font-size: 0.85rem;
+      }
+
+      .timing-row:last-child {
+        border-bottom: none;
+      }
+
+      /* =========================
+         DARK MODE
+      ========================= */
+
+      body.dark {
+        /* ── Semantic surface tokens ── */
+        --dm-bg:          #0f172a; /* page background          */
+        --dm-surface-1:   #1e293b; /* cards, panels            */
+        --dm-surface-2:   #162032; /* alt sections / FAQ answer */
+        --dm-surface-3:   #263347; /* hover states, inputs     */
+        --dm-border:      #2e3f55; /* all borders              */
+        --dm-border-soft: #1e2e42; /* subtle dividers          */
+
+        /* ── Text tokens ── */
+        --dm-text-primary:   #f1f5f9; /* headings, strong text  */
+        --dm-text-secondary: #94a3b8; /* body copy, descriptions */
+        --dm-text-muted:     #64748b; /* timestamps, labels     */
+
+        /* ── Override gray scale so all var(--gray-*) references flip ── */
+        --white:    #0f172a;
+        --gray-50:  #131f30;
+        --gray-100: #1a2840;
+        --gray-200: #2e3f55;
+        --gray-300: #3d5166;
+        --gray-400: #64748b;
+        --gray-500: #94a3b8;
+        --gray-600: #b8c8da;
+        --gray-700: #d4e0ec;
+        --gray-800: #e8f0f8;
+        --gray-900: #f1f5f9;
+
+        /* ── Remap pink-50/100 so light backgrounds flip to dark tints ── */
+        --pink-50:  rgba(214, 48, 116, 0.07);
+        --pink-100: rgba(214, 48, 116, 0.14);
+        --pink-200: rgba(214, 48, 116, 0.28);
+
+        background: var(--dm-bg);
+        color: var(--dm-text-secondary);
+      }
+
+      /* ── Page & section backgrounds ── */
+      body.dark .section          { background: var(--dm-bg); }
+      body.dark .section-alt      { background: var(--dm-surface-2); }
+      body.dark .section-pink     { background: #130e1d; }
+      body.dark .hero             { background: var(--dm-bg); }
+
+      /* ── Navbar ── */
+      body.dark .navbar {
+        background: rgba(15, 23, 42, 0.97);
+        border-bottom-color: var(--dm-border);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+      }      body.dark .nav-brand         { color: var(--dm-text-primary); }
+      body.dark .nav-brand-text {
+        background: linear-gradient(135deg, #f1f5f9 30%, var(--pink-300));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      body.dark .nav-link          { color: var(--dm-text-secondary); }
+      body.dark .nav-item:hover > .nav-link,
+      body.dark .nav-link.active   { color: var(--pink-300); }
+      body.dark .nav-link .nav-chevron { color: var(--dm-text-muted); }
+
+      /* ── Nav dropdown ── */
+      body.dark .nav-dropdown {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+        box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3);
+      }
+      body.dark .nav-dropdown::before {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+      }
+      body.dark .nav-dropdown-item        { color: var(--dm-text-secondary); }
+      body.dark .nav-dropdown-item:hover  { background: var(--dm-surface-3); color: var(--pink-300); }
+      body.dark .nav-dropdown-icon        { background: var(--dm-surface-3); color: var(--pink-300); }
+      body.dark .nav-dropdown-item:hover .nav-dropdown-icon { background: #2e3f55; }
+      body.dark .nav-dropdown-sub         { color: var(--dm-text-muted); }
+      body.dark .nav-dropdown-divider     { background: var(--dm-border); }
+
+      /* ── Mobile drawer ── */
+      body.dark .nav-drawer {
+        background: var(--dm-surface-1);
+        border-bottom-color: var(--dm-border);
+      }
+      body.dark .nav-drawer a             { color: var(--dm-text-secondary); border-bottom-color: var(--dm-border-soft); }
+      body.dark .nav-drawer a:hover       { color: var(--pink-300); }
+
+      /* ── Theme toggle ── */
+      body.dark .theme-toggle             { background: var(--dm-surface-1); color: var(--dm-text-primary); }
+      body.dark .theme-toggle:hover       { background: var(--dm-surface-3); }
+
+      /* ── Hero elements ── */
+      body.dark .hero h1                  { color: var(--dm-text-primary); }
+      body.dark .hero h1 span            { color: var(--pink-300); }
+      body.dark .hero-sub                 { color: var(--dm-text-secondary); }
+      body.dark .hero-badge {
+        background: rgba(214, 48, 116, 0.12);
+        border-color: rgba(214, 48, 116, 0.3);
+        color: var(--pink-300);
+      }
+      body.dark .hero-stats               { border-top-color: var(--dm-border); }
+      body.dark .hero-stat-num            { color: var(--dm-text-primary); }
+      body.dark .hero-stat-label          { color: var(--dm-text-muted); }
+      body.dark .hero-card-main {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+      }
+      body.dark .hero-card-header         { border-bottom-color: var(--dm-border-soft); }
+      body.dark .hero-card-header div p:first-child { color: var(--dm-text-primary); }
+      body.dark .hero-card-header div p:last-child  { color: var(--dm-text-muted); }
+      body.dark .checklist li             { color: var(--dm-text-secondary); }
+      body.dark .check-icon.gray          { background: var(--dm-surface-3); color: var(--dm-text-muted); }
+      body.dark .floating-card {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+      }
+      body.dark .fc-label                 { color: var(--dm-text-muted); }
+      body.dark .fc-value                 { color: var(--dm-text-primary); }
+
+      /* ── Buttons ── */
+      body.dark .btn-outline {
+        color: var(--dm-text-primary);
+        border-color: var(--dm-border);
+        background: transparent;
+      }
+      body.dark .btn-outline:hover        { background: var(--dm-surface-3); border-color: var(--pink-400); }
+      body.dark .btn-outline i            { color: var(--dm-text-primary); }
+
+      /* ── Section headings / labels ── */
+      body.dark .section-label            { color: var(--pink-300); }
+      body.dark .section-title            { color: var(--dm-text-primary); }
+      body.dark .section-sub              { color: var(--dm-text-secondary); }
+      body.dark h1, body.dark h2,
+      body.dark h3, body.dark h4,
+      body.dark h5                        { color: var(--dm-text-primary); }
+
+      /* ── Cards (generic) ── */
+      body.dark .card {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+      }
+      body.dark .card:hover               { border-color: var(--pink-600); }
+      body.dark .card h3                  { color: var(--dm-text-primary); }
+      body.dark .card p                   { color: var(--dm-text-secondary); }
+      body.dark .card-icon                { background: rgba(214, 48, 116, 0.15); color: var(--pink-300); }
+      body.dark .card-icon.dark           { background: var(--dm-surface-3); color: var(--dm-text-primary); }
+
+      /* ── Branch cards ── */
+      body.dark .branch-card {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+      }
+      body.dark .branch-card:hover        { background: rgba(214, 48, 116, 0.08); border-color: var(--pink-600); }
+      body.dark .branch-name              { color: var(--dm-text-primary); }
+      body.dark .branch-code              { color: var(--dm-text-muted); }
+
+      /* ── Info blocks ── */
+      body.dark .info-block {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+      }
+      body.dark .info-block h4            { color: var(--dm-text-primary); border-bottom-color: var(--dm-border-soft); }
+      body.dark .info-list li             { color: var(--dm-text-secondary); border-bottom-color: var(--dm-border-soft); }
+
+      /* ── Exam cards ── */
+      body.dark .exam-card.cia {
+        background: rgba(214, 48, 116, 0.08);
+        border-color: rgba(214, 48, 116, 0.25);
+      }
+      body.dark .exam-card.cia .exam-title  { color: var(--dm-text-primary); }
+      body.dark .exam-card.cia .exam-weight { color: var(--pink-300); }
+      body.dark .exam-card.cia .exam-item   { color: var(--dm-text-secondary); }
+      body.dark .exam-card.cia .exam-item i { color: var(--pink-400); }
+      /* ESE: base CSS uses var(--gray-900) which flips to near-white — force dark */
+      body.dark .exam-card.ese {
+        background: #0d1929 !important;
+        border: 1px solid var(--dm-border) !important;
+      }
+
+      /* ── Club cards ── */
+      body.dark .club-card {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+      }
+      body.dark .club-card.featured {
+        border-color: rgba(214, 48, 116, 0.4);
+        background: linear-gradient(135deg, rgba(214,48,116,0.08) 0%, var(--dm-surface-1) 60%);
+      }
+      body.dark .club-name                { color: var(--dm-text-primary); }
+      body.dark .club-desc                { color: var(--dm-text-secondary); }
+      body.dark .tag                      { background: var(--dm-surface-3); color: var(--dm-text-secondary); }
+      body.dark .tag.pink                 { background: rgba(214,48,116,0.18); color: var(--pink-300); }
+
+      /* ── Resource cards ── */
+      body.dark .resource-card {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+      }
+      body.dark .resource-card:hover      { border-color: var(--pink-500); }
+      body.dark .resource-icon            { background: rgba(214,48,116,0.15); color: var(--pink-300); }
+      body.dark .resource-name            { color: var(--dm-text-primary); }
+      body.dark .resource-desc            { color: var(--dm-text-muted); }
+
+      /* ── Tour cards ── */
+      body.dark .tour-card {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+      }
+      body.dark .tour-card h3             { color: var(--dm-text-primary); }
+      body.dark .tour-card p              { color: var(--dm-text-secondary); }
+      body.dark img                       { opacity: 0.88; }
+
+      /* ── Timeline (daily schedule) ── */
+      body.dark .timeline::before         { background: var(--dm-border); }
+      body.dark .timeline-event           { color: var(--dm-text-primary); }
+      body.dark .timeline-detail          { color: var(--dm-text-muted); }
+
+      /* ── Download guide ── */
+      body.dark .download-guide {
+        background: rgba(214, 48, 116, 0.08);
+        border: 1px solid rgba(214, 48, 116, 0.22);
+      }
+      body.dark .download-guide h3 { color: var(--dm-text-primary); }
+      body.dark .download-guide p  { color: var(--dm-text-secondary); }
+
+      /* ── Survival kit – Do's & Don'ts ── */
+      body.dark .dos-col {
+        background: rgba(21, 128, 61, 0.12);
+        border-color: rgba(22, 163, 74, 0.35);
+      }
+      body.dark .dos-col .dd-header       { color: #4ade80; border-bottom-color: rgba(74, 222, 128, 0.15); }
+      body.dark .dos-col .dd-list li      { color: #86efac; }
+      body.dark .dos-col .dd-list li i    { color: #4ade80; }
+
+      body.dark .donts-col {
+        background: rgba(159, 18, 57, 0.12);
+        border-color: rgba(244, 63, 94, 0.35);
+      }
+      body.dark .donts-col .dd-header     { color: #fb7185; border-bottom-color: rgba(251, 113, 133, 0.15); }
+      body.dark .donts-col .dd-list li    { color: #fda4af; }
+      body.dark .donts-col .dd-list li i  { color: #fb7185; }
+
+      /* ── Progress bars ── */
+      body.dark .progress-bar-wrap        { background: var(--dm-surface-3); }
+      body.dark .cgpa-label               { color: var(--dm-text-secondary); }
+
+      /* ── Chips ── */
+      body.dark .chip                     { background: var(--dm-surface-3); color: var(--dm-text-secondary); }
+      body.dark .chip.pink                { background: rgba(214,48,116,0.18); color: var(--pink-300); }
+
+      /* ── FAQ ── */
+      body.dark .faq-list                 { border-color: var(--dm-border); }
+      body.dark .faq-item                 { border-bottom-color: var(--dm-border); }
+      body.dark .faq-q {
+        background: var(--dm-surface-1);
+      }
+      body.dark .faq-q:hover              { background: var(--dm-surface-3); }
+      body.dark .faq-q span               { color: var(--dm-text-primary); }
+      body.dark .faq-a {
+        background: var(--dm-surface-2);
+        color: var(--dm-text-secondary);
+      }
+
+      /* ── Week blocks (first-month timeline) ── */
+      body.dark .week-dot {
+        background: var(--dm-surface-1);
+        border-color: var(--pink-600);
+      }
+      body.dark .week-block:hover .week-dot { background: var(--pink-600); border-color: var(--pink-600); }
+      body.dark .week-title               { color: var(--dm-text-primary); }
+      body.dark .week-items li            { color: var(--dm-text-muted); }
+      body.dark .month-timeline::before   { background: var(--dm-border); }
+
+      /* ── Club quiz ── */
+      body.dark .quiz-wrap {
+        background: var(--dm-surface-1);
+        border-color: var(--dm-border);
+      }
+      body.dark .quiz-q                   { color: var(--dm-text-primary); }
+      body.dark .quiz-option {
+        background: var(--dm-surface-2);
+        border-color: var(--dm-border);
+        color: var(--dm-text-secondary);
+      }
+      body.dark .quiz-option:hover        { background: var(--dm-surface-3); border-color: var(--pink-500); color: var(--pink-300); }
+      body.dark .quiz-option.selected     { background: rgba(214,48,116,0.12); border-color: var(--pink-500); color: var(--pink-300); }
+      body.dark .quiz-result {
+        background: rgba(214,48,116,0.1);
+        border-color: rgba(214,48,116,0.3);
+      }
+      body.dark .quiz-result-title        { color: var(--pink-300); }
+      body.dark .quiz-result-desc         { color: var(--dm-text-secondary); }
+
+      /* ── Mess timings ── */
+      body.dark .mess-timings {
+        background: rgba(30, 41, 59, 0.8);
+        border-color: var(--dm-border);
+      }
+      body.dark .mess-timings h5          { color: var(--pink-300); }
+      body.dark .timing-row               { border-bottom-color: var(--dm-border-soft); color: var(--dm-text-secondary); }
+
+      /* ── Announcement / ticker bar ── */
+      body.dark .announcement-bar         { background: var(--dm-surface-1); }
+      body.dark .announcement-item        { color: var(--dm-text-secondary); }
+
+      /* ── Misc ── */
+      body.dark hr                        { border-color: var(--dm-border); }
+      body.dark .divider                  { background: var(--pink-600); }
+
+      /* ── Hero section — override hardcoded inline background gradient ── */
+      body.dark section#home {
+        background: linear-gradient(160deg, var(--dm-bg) 60%, #1a0f1f 100%) !important;
+      }
+
+      /* ── ESE exam card fix: .ese uses var(--gray-900) which flips to white in dark ── */
+      body.dark .exam-card.ese {
+        background: #0f172a !important;
+        border: 1px solid #2e3f55 !important;
+      }
+
+      /* ── Mental Health block — inline var(--pink-50) flips to near-black ── */
+      body.dark [style*="var(--pink-50)"][style*="var(--pink-200)"],
+      body.dark div[style*="background: var(--pink-50)"] {
+        background: rgba(214, 48, 116, 0.07) !important;
+        border-color: rgba(214, 48, 116, 0.22) !important;
+      }
+
+      /* ── Ticker/scrolling banner — var(--gray-900) flips to near-white ── */
+      body.dark .ticker-wrap {
+        background: #090f1a;
+        border-top-color: rgba(255, 255, 255, 0.07);
+        border-bottom-color: rgba(255, 255, 255, 0.07);
+      }
+
+      /* ── "Active" badge in hero card ── */
+      body.dark .hero-card-header span[style*="dcfce7"] {
+        background: rgba(34, 197, 94, 0.15) !important;
+        color: #4ade80 !important;
+        filter: none !important;
+      }
+
+      /* ── Nav dropdown icons with hardcoded inline pastel bg ── */
+      body.dark .nav-dropdown-icon[style*="background"] {
+        background: var(--dm-surface-3) !important;
+        color: var(--pink-300) !important;
+      }
+
+      /* ── All inline-styled coloured icon boxes (resource-icon, club-icon, etc.)
+         Map each pastel to a dark-appropriate tinted surface + keep icon legible ── */
+
+      /* Green (#f0fdf4 / #ecfdf5) */
+      body.dark [style*="#f0fdf4"],
+      body.dark [style*="#ecfdf5"] {
+        background: rgba(22, 163, 74, 0.15) !important;
+        color: #4ade80 !important;
+      }
+      /* Blue (#eff6ff / #dbeafe) */
+      body.dark [style*="#eff6ff"],
+      body.dark [style*="#dbeafe"] {
+        background: rgba(37, 99, 235, 0.15) !important;
+        color: #93c5fd !important;
+      }
+      /* Orange (#fff7ed) */
+      body.dark [style*="#fff7ed"] {
+        background: rgba(234, 88, 12, 0.15) !important;
+        color: #fdba74 !important;
+      }
+      /* Red (#fff1f2 / #fce7f3) */
+      body.dark [style*="#fff1f2"],
+      body.dark [style*="#fce7f3"] {
+        background: rgba(225, 29, 72, 0.15) !important;
+        color: #fda4af !important;
+      }
+      /* Purple (#f5f3ff / #ede9fe) */
+      body.dark [style*="#f5f3ff"],
+      body.dark [style*="#ede9fe"] {
+        background: rgba(124, 58, 237, 0.15) !important;
+        color: #c4b5fd !important;
+      }
+      /* Yellow (#fef9c3) */
+      body.dark [style*="#fef9c3"] {
+        background: rgba(161, 98, 7, 0.2) !important;
+        color: #fde047 !important;
+      }
+      /* Teal/green (#dcfce7) */
+      body.dark [style*="#dcfce7"] {
+        background: rgba(21, 128, 61, 0.15) !important;
+        color: #86efac !important;
+      }
+      /* Deep blue (#0369a1) */
+      body.dark [style*="#0369a1"] {
+        background: rgba(3, 105, 161, 0.18) !important;
+        color: #7dd3fc !important;
+      }
+
+      /* Ensure the Active hero badge (also dcfce7) overrides the above with no filter */
+      body.dark .hero-card-header span[style*="dcfce7"] {
+        background: rgba(34, 197, 94, 0.15) !important;
+        color: #4ade80 !important;
+      }
+
+      /* ── footer bottom ── */
+      body.dark .footer-bottom           { color: rgba(255,255,255,0.35); }
+
+      .theme-toggle {
+        width: 42px;
+        height: 42px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: 0.3s;
+        background: var(--pink-50);
+      }
+
+      .theme-toggle:hover {
+        transform: rotate(20deg) scale(1.1);
+      }
+
+      /* =========================
+   FOOTER DARK MODE FIX
+========================= */
+
+body.dark .footer,
+body.dark footer {
+    background: #020617 !important;
+    color: #e2e8f0 !important;
+    border-top: 1px solid #1e293b;
+}
+
+/* Footer headings */
+body.dark .footer h3,
+body.dark .footer h4,
+body.dark footer h3,
+body.dark footer h4 {
+    color: #f8fafc !important;
+}
+
+/* Footer links */
+body.dark .footer a,
+body.dark footer a {
+    color: #94a3b8 !important;
+    transition: color 0.3s ease;
+}
+
+body.dark .footer a:hover,
+body.dark footer a:hover {
+    color: #ec4899 !important;
+}
+
+/* Footer paragraphs and text */
+body.dark .footer p,
+body.dark .footer span,
+body.dark .footer li,
+body.dark footer p,
+body.dark footer span,
+body.dark footer li {
+    color: #cbd5e1 !important;
+}
+
+/* Footer divider */
+body.dark .footer hr,
+body.dark footer hr {
+    border-color: #334155 !important;
+}
+
+/* Footer bottom copyright area */
+body.dark .footer-bottom,
+body.dark .copyright {
+    border-top: 1px solid #1e293b !important;
+    color: #94a3b8 !important;
+    background: #020617 !important;
+}
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <a href="#home" class="nav-brand">
+        <span class="nav-brand-text">Campus Compass</span>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="#academics" class="nav-link">
+            Academics <i class="fas fa-chevron-down nav-chevron"></i>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#academics" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon">
+                <i class="fas fa-code-branch"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                B.Tech Branches<span class="nav-dropdown-sub"
+                  >All 8 programmes offered</span
+                >
+              </div>
+            </a>
+            <a href="#academics" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon"><i class="fas fa-flask"></i></div>
+              <div class="nav-dropdown-label">
+                Classes & Labs<span class="nav-dropdown-sub"
+                  >Structure & schedules</span
+                >
+              </div>
+            </a>
+            <a href="#academics" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                Attendance Rules<span class="nav-dropdown-sub"
+                  >75% minimum policy</span
+                >
+              </div>
+            </a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="#academics" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                CIA &amp; ESE Pattern<span class="nav-dropdown-sub"
+                  >50–50 grading system</span
+                >
+              </div>
+            </a>
+            <a href="#academics" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                CGPA Tips<span class="nav-dropdown-sub">Score from Day 1</span>
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#clubs" class="nav-link">
+            Clubs <i class="fas fa-chevron-down nav-chevron"></i>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#clubs" class="nav-dropdown-item">
+              <div
+                class="nav-dropdown-icon"
+                style="background: #fce7f3; color: #be185d"
+              >
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                Chakravyuha<span class="nav-dropdown-sub"
+                  >Technical club · 350+ members</span
+                >
+              </div>
+            </a>
+            <a href="#clubs" class="nav-dropdown-item">
+              <div
+                class="nav-dropdown-icon"
+                style="background: #eff6ff; color: #2563eb"
+              >
+                <i class="fas fa-robot"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                AI &amp; Robotics<span class="nav-dropdown-sub"
+                  >ML, hardware &amp; automation</span
+                >
+              </div>
+            </a>
+            <a href="#clubs" class="nav-dropdown-item">
+              <div
+                class="nav-dropdown-icon"
+                style="background: #f0fdf4; color: #16a34a"
+              >
+                <i class="fas fa-shield-halved"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                CyberSec Club<span class="nav-dropdown-sub"
+                  >CTF &amp; ethical hacking</span
+                >
+              </div>
+            </a>
+            <div class="nav-dropdown-divider"></div>
+            <a href="#quiz" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon">
+                <i class="fas fa-question-circle"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                Club Finder Quiz<span class="nav-dropdown-sub"
+                  >Find your best match</span
+                >
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#campus-life" class="nav-link">
+            Campus Life <i class="fas fa-chevron-down nav-chevron"></i>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#hostel" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon"><i class="fas fa-sun"></i></div>
+              <div class="nav-dropdown-label">
+                Daily Routine<span class="nav-dropdown-sub"
+                  >What a typical day looks like</span
+                >
+              </div>
+            </a>
+            <a href="#hostel" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                Mess &amp; Food<span class="nav-dropdown-sub"
+                  >Timings, options &amp; tips</span
+                >
+              </div>
+            </a>
+            <a href="#hostel" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon">
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                Key Locations<span class="nav-dropdown-sub"
+                  >Library, medical, sports</span
+                >
+              </div>
+            </a>
+            <a href="#hostel" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon">
+                <i class="fas fa-calendar-star"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                First Month Timeline<span class="nav-dropdown-sub"
+                  >Week by week guide</span
+                >
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#survival" class="nav-link">
+            Survival Kit <i class="fas fa-chevron-down nav-chevron"></i>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#survival" class="nav-dropdown-item">
+              <div
+                class="nav-dropdown-icon"
+                style="background: #f0fdf4; color: #16a34a"
+              >
+                <i class="fas fa-circle-check"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                Do's &amp; Don'ts<span class="nav-dropdown-sub"
+                  >Tested senior wisdom</span
+                >
+              </div>
+            </a>
+            <a href="#survival" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon"><i class="fas fa-clock"></i></div>
+              <div class="nav-dropdown-label">
+                Time Management<span class="nav-dropdown-sub"
+                  >40/25/35 framework</span
+                >
+              </div>
+            </a>
+            <a href="#survival" class="nav-dropdown-item">
+              <div
+                class="nav-dropdown-icon"
+                style="background: #fce7f3; color: #be185d"
+              >
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                Mental Health<span class="nav-dropdown-sub"
+                  >Wellness resources</span
+                >
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#tools" class="nav-link">
+            Tools <i class="fas fa-chevron-down nav-chevron"></i>
+          </a>
+          <div class="nav-dropdown">
+            <a href="#tools" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon"><i class="fas fa-server"></i></div>
+              <div class="nav-dropdown-label">
+                College Portals<span class="nav-dropdown-sub"
+                  >ERP, email &amp; library</span
+                >
+              </div>
+            </a>
+            <a href="#tools" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon">
+                <i class="fas fa-play-circle"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                Learning Platforms<span class="nav-dropdown-sub"
+                  >NPTEL, LeetCode, GFG</span
+                >
+              </div>
+            </a>
+            <a href="#tools" class="nav-dropdown-item">
+              <div class="nav-dropdown-icon">
+                <i class="fas fa-file-code"></i>
+              </div>
+              <div class="nav-dropdown-label">
+                Dev Tools<span class="nav-dropdown-sub"
+                  >VS Code, Git, Python</span
+                >
+              </div>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 10px">
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+
+        <a href="#faq" class="nav-cta-btn">
+          <i class="fas fa-circle-question"></i> FAQ
+        </a>
+      </div>
+    </nav>
+
+    <!-- QUICK TIPS TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker-inner">
+        <span class="ticker-item"
+          ><i class="fas fa-id-card"></i> Always carry your ID card it's required
+          for labs, library, and hostel entry</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-clock"></i> 75% attendance is mandatory track it from Day 1 on the ERP portal</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-star"></i> CIA contributes 50% to your final grade so don't ignore it</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-users"></i> Join at least one club in the first
+          month to increase your network</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-laptop"></i> Install VS Code and Git on Day 1</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-bell"></i> Add Amrita ERP to your phone's home
+          screen, it runs your college life</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-id-card"></i> Always carry your ID card it's required
+          for labs, library, and hostel entry</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-clock"></i> 75% attendance is mandatory track it from Day 1 on the ERP portal</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-star"></i> CIA contributes 50% to your final grade so don't ignore it</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-users"></i> Join at least one club in the first
+          month to increase your network</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-laptop"></i> Install VS Code and Git on Day 1</span
+        >
+        <span class="ticker-sep">·</span>
+        <span class="ticker-item"
+          ><i class="fas fa-bell"></i> Add Amrita ERP to your phone's home
+          screen</span
+        >
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section
+      id="home"
+      class="section"
+      style="
+        padding-top: 60px;
+        padding-bottom: 80px;
+        background: linear-gradient(160deg, #fff 60%, var(--pink-50) 100%);
+      "
+    >
+      <div class="section-inner">
+        <div class="hero" style="padding: 0; margin: 0">
+          <div class="hero-content fade-up">
+            <div class="hero-badge">
+              <i class="fas fa-map-marker-alt"></i> Amrita, Amaravati · July
+              2026
+            </div>
+            <h1>Your Complete<br />Guide to <span>College Life</span></h1>
+            <p class="hero-sub">
+              Everything you need to know before your first day at Amrita Vishwa
+              Vidyapeetham, Amaravati starting from academics and clubs to hostel life
+              and beyond.
+            </p>
+            <div class="hero-actions">
+              <a href="#academics" class="btn-primary"
+                ><i class="fas fa-book-open"></i> Explore the Guide</a
+              >
+              <a href="#quiz" class="btn-outline"
+                ><i class="fas fa-question-circle"></i> Find Your Club</a
+              >
+            </div>
+            <div class="hero-stats">
+              <div>
+                <div class="hero-stat-num">6+</div>
+                <div class="hero-stat-label">Sections</div>
+              </div>
+              <div>
+                <div class="hero-stat-num">350+</div>
+                <div class="hero-stat-label">Club Members</div>
+              </div>
+              <div>
+                <div class="hero-stat-num">2026</div>
+                <div class="hero-stat-label">Batch</div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hero-visual fade-up"
+            style="transition-delay: 0.15s; position: relative; padding: 20px"
+          >
+            <div class="hero-card-main">
+              <div class="hero-card-header">
+                <div class="avatar">AV</div>
+                <div>
+                  <p>Welcome, Fresher!</p>
+                  <p>B.Tech 2026–2030</p>
+                </div>
+                <div style="margin-left: auto">
+                  <span
+                    style="
+                      font-size: 0.72rem;
+                      background: #dcfce7;
+                      color: #166534;
+                      padding: 3px 8px;
+                      border-radius: 100px;
+                      font-weight: 600;
+                    "
+                    ><span class="fc-dot"></span>Active</span
+                  >
+                </div>
+              </div>
+              <p
+                style="
+                  font-size: 0.78rem;
+                  color: var(--gray-400);
+                  text-transform: uppercase;
+                  font-weight: 700;
+                  letter-spacing: 0.07em;
+                  margin-bottom: 0.75rem;
+                "
+              >
+                Your First-Week Checklist
+              </p>
+              <ul class="checklist">
+                <li>
+                  <div class="check-icon"><i class="fas fa-check"></i></div>
+                  Collect ID card from admin office
+                </li>
+                <li>
+                  <div class="check-icon"><i class="fas fa-check"></i></div>
+                  Register on Amrita ERP portal
+                </li>
+                <li>
+                  <div class="check-icon"><i class="fas fa-check"></i></div>
+                  Attend orientation program
+                </li>
+                <li>
+                  <div class="check-icon gray">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  Explore club fair &amp; sign up
+                </li>
+                <li>
+                  <div class="check-icon gray">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  Set up your study schedule
+                </li>
+              </ul>
+            </div>
+            <div class="floating-card floating-card-1">
+              <div class="fc-label">Your CGPA Goal</div>
+              <div class="fc-value" style="color: var(--pink-500)">9.0+</div>
+              <div
+                style="
+                  font-size: 0.72rem;
+                  color: var(--gray-400);
+                  margin-top: 3px;
+                "
+              >
+                Start strong from Sem 1
+              </div>
+            </div>
+            <div class="floating-card floating-card-2">
+              <div class="fc-label">
+                <span class="fc-dot"></span> Clubs open
+              </div>
+              <div class="fc-value">12+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ACADEMICS ─── -->
+    <section id="academics" class="section section-alt">
+      <div class="section-inner">
+        <div class="fade-up">
+          
+          <h2 class="section-title">Academic Life</h2>
+          <p class="section-sub">
+            From understanding your branch to acing exams and everything you need
+            to navigate academics at Amrita Amaravati.
+          </p>
+        </div>
+
+        <!-- Branches -->
+        <p
+          style="
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+          "
+        >
+          B.Tech Branches Offered
+        </p>
+        <div class="branch-grid fade-up">
+          <div class="branch-card">
+            <span class="branch-num">01</span>
+            <div>
+              <div class="branch-name">Computer Science & Engineering</div>
+              <div class="branch-code">CSE</div>
+            </div>
+          </div>
+          <div class="branch-card">
+            <span class="branch-num">02</span>
+            <div>
+              <div class="branch-name">Electronics & Communication</div>
+              <div class="branch-code">ECE</div>
+            </div>
+          </div>
+          <div class="branch-card">
+            <span class="branch-num">03</span>
+            <div>
+              <div class="branch-name">Electrical & Electronics</div>
+              <div class="branch-code">EEE</div>
+            </div>
+          </div>
+          <div class="branch-card">
+            <span class="branch-num">04</span>
+            <div>
+              <div class="branch-name">Mechanical Engineering</div>
+              <div class="branch-code">MECH</div>
+            </div>
+          </div>
+          <div class="branch-card">
+            <span class="branch-num">05</span>
+            <div>
+              <div class="branch-name">Civil Engineering</div>
+              <div class="branch-code">CIVIL</div>
+            </div>
+          </div>
+          <div class="branch-card">
+            <span class="branch-num">06</span>
+            <div>
+              <div class="branch-name">AI & Data Science</div>
+              <div class="branch-code">AI&DS</div>
+            </div>
+          </div>
+          <div class="branch-card">
+            <span class="branch-num">07</span>
+            <div>
+              <div class="branch-name">Cyber Security</div>
+              <div class="branch-code">CY</div>
+            </div>
+          </div>
+          <div class="branch-card">
+            <span class="branch-num">08</span>
+            <div>
+              <div class="branch-name">Internet of Things</div>
+              <div class="branch-code">IoT</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Class Structure & Attendance -->
+        <div class="info-row fade-up" style="margin-top: 2rem">
+          <div class="info-block">
+            <h4><i class="fas fa-calendar-alt"></i> Class & Lab Structure</h4>
+            <ul class="info-list">
+              <li>
+                <i class="fas fa-circle-dot"></i> Theory classes: 1-hour slots,
+                typically 5–6 per day
+              </li>
+              <li>
+                <i class="fas fa-circle-dot"></i> Lab sessions: 3-hour
+                continuous blocks, 2–3 per week
+              </li>
+              <li>
+                <i class="fas fa-circle-dot"></i> Each lab has a record journal
+                — maintain it neatly, it's graded
+              </li>
+              <li>
+                <i class="fas fa-circle-dot"></i> Practicals include viva-voce
+                (oral examination) each session
+              </li>
+              <li>
+                <i class="fas fa-circle-dot"></i> Tutorials (extra sessions) are
+                held for complex subjects
+              </li>
+              <li>
+                <i class="fas fa-circle-dot"></i> Saturday classes are common —
+                plan your weekends accordingly
+              </li>
+            </ul>
+          </div>
+          <div class="info-block">
+            <h4><i class="fas fa-calendar-check"></i> Attendance Rules</h4>
+            <ul class="info-list">
+              <li>
+                <i class="fas fa-triangle-exclamation"></i> Minimum 75%
+                attendance required per subject
+              </li>
+              <li>
+                <i class="fas fa-triangle-exclamation"></i> Below 75% = detained
+                from writing ESE for that subject
+              </li>
+              <li>
+                <i class="fas fa-circle-dot"></i> Track attendance daily on the
+                ERP portal — don't rely on memory
+              </li>
+              <li>
+                <i class="fas fa-circle-dot"></i> Medical certificates can grant
+                attendance condonation (limited)
+              </li>
+              <li>
+                <i class="fas fa-circle-dot"></i> Even 1–2 days of absence per
+                week adds up quickly
+              </li>
+              <li>
+                <i class="fas fa-circle-dot"></i> Proxy attendance is strictly
+                prohibited and leads to suspension
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Exam Pattern -->
+        <div class="fade-up" style="margin-top: 2rem">
+          <h3
+            style="
+              font-family: var(--font-display);
+              font-size: 1.3rem;
+              font-weight: 700;
+              color: var(--gray-900);
+              margin-bottom: 0.5rem;
+            "
+          >
+            Exam Pattern
+          </h3>
+          <p
+            style="
+              font-size: 0.875rem;
+              color: var(--gray-400);
+              margin-bottom: 1.5rem;
+            "
+          >
+            Your final grade is split equally between continuous assessment and
+            semester exams.
+          </p>
+          <div class="exam-blocks">
+            <div class="exam-card cia">
+              <div class="exam-weight">50%</div>
+              <div class="exam-title">CIA — Continuous Internal Assessment</div>
+              <ul class="exam-items">
+                <li class="exam-item">
+                  <i class="fas fa-check-circle"></i> 2 CIA tests per semester
+                  (theory)
+                </li>
+                <li class="exam-item">
+                  <i class="fas fa-check-circle"></i> Lab work and records
+                  graded continuously
+                </li>
+                <li class="exam-item">
+                  <i class="fas fa-check-circle"></i> Assignments, quizzes, and
+                  mini-projects
+                </li>
+                <li class="exam-item">
+                  <i class="fas fa-check-circle"></i> Surprise tests may be
+                  conducted anytime
+                </li>
+                <li class="exam-item">
+                  <i class="fas fa-check-circle"></i> Attendance itself
+                  contributes to CIA marks
+                </li>
+              </ul>
+            </div>
+            <div class="exam-card ese">
+              <div class="exam-weight">50%</div>
+              <div class="exam-title">ESE — End Semester Exam</div>
+              <ul class="exam-items">
+                <li class="exam-item">
+                  <i class="fas fa-check-circle"></i> 3-hour centralized exam
+                  per subject
+                </li>
+                <li class="exam-item">
+                  <i class="fas fa-check-circle"></i> Held in November (odd sem)
+                  &amp; April (even sem)
+                </li>
+                <li class="exam-item">
+                  <i class="fas fa-check-circle"></i> Practical exams conducted
+                  separately
+                </li>
+                <li class="exam-item">
+                  <i class="fas fa-check-circle"></i> Minimum 35/50 required to
+                  pass
+                </li>
+                <li class="exam-item">
+                  <i class="fas fa-check-circle"></i> Failing ESE means arrear —
+                  avoid at all costs
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- CGPA Tips -->
+        <div class="fade-up" style="margin-top: 2.5rem">
+          <h3
+            style="
+              font-family: var(--font-display);
+              font-size: 1.3rem;
+              font-weight: 700;
+              color: var(--gray-900);
+              margin-bottom: 0.4rem;
+            "
+          >
+            Maintaining a Good CGPA from Day 1
+          </h3>
+          <p
+            style="
+              font-size: 0.875rem;
+              color: var(--gray-400);
+              margin-bottom: 1.5rem;
+            "
+          >
+            Each semester's GPA impacts your cumulative — don't let early
+            semesters drag your average down.
+          </p>
+          <div class="card-grid-3 fade-up">
+            <div class="card">
+              <div class="card-icon"><i class="fas fa-calendar-day"></i></div>
+              <h3>Stay consistent weekly</h3>
+              <p>
+                Review your notes every evening — 30 minutes of daily revision
+                beats 10 hours of cramming before exams.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+              <h3>Nail every CIA</h3>
+              <p>
+                CIA marks are easier to score than ESE. Aim for full marks in
+                assignments, lab records, and internal tests.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="fas fa-users-gear"></i></div>
+              <h3>Form study groups</h3>
+              <p>
+                Group study for tough subjects like Mathematics, Physics, and
+                Programming helps concepts stick faster.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CLUBS ─── -->
+    <section id="clubs" class="section">
+      <div class="section-inner">
+        <div class="fade-up">
+          <h2 class="section-title">Clubs & Extracurriculars</h2>
+          <p class="section-sub">
+            College is not just about grades. The skills, friendships, and
+            experiences you build through clubs will define your career as much
+            as your CGPA.
+          </p>
+        </div>
+
+        <div class="club-grid fade-up">
+          <!-- Chakravyuha - featured -->
+          <div class="club-card featured">
+            <span class="featured-tag"
+              ><i class="fas fa-star"></i> Featured</span
+            >
+            <div
+              class="club-icon"
+              style="background: var(--pink-100); color: var(--pink-600)"
+            >
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="club-name">Chakravyuha Technical Club</div>
+            <div class="club-desc">
+              The premier technical club at Amrita Amaravati with 350+ members.
+              Runs hackathons, build challenges, competitive programming
+              contests, and workshops on cutting-edge technologies. The club
+              that made this guide possible.
+            </div>
+            <div class="club-tags">
+              <span class="tag pink">Coding</span>
+              <span class="tag pink">Hackathons</span>
+              <span class="tag pink">AI/ML</span>
+              <span class="tag pink">DSA</span>
+            </div>
+          </div>
+
+          <div class="club-card">
+            <div class="club-icon" style="background: #eff6ff; color: #2563eb">
+              <i class="fas fa-camera"></i>
+            </div>
+            <div class="club-name">Drishya – Media Club</div>
+            <div class="club-desc">
+              Dedicated to photography, videography, content creation, and digital storytelling. Provides students with opportunities to showcase creativity through media production and event coverage.
+            </div>
+            <div class="club-tags">
+              <span class="tag">Photography</span><span class="tag">Media</span
+              ><span class="tag">Content</span>
+            </div>
+          </div>
+
+          <div class="club-card">
+            <div class="club-icon" style="background: #f0fdf4; color: #16a34a">
+              <i class="fas fa-music"></i>
+            </div>
+            <div class="club-name">Nritya Sparsh – Dance Club</div>
+            <div class="club-desc">
+              Promotes diverse dance forms and artistic expression through performances, workshops, and competitions. Encourages students to develop confidence, teamwork, and stage presence.
+            </div>
+            <div class="club-tags">
+              <span class="tag">Dance</span
+              ><span class="tag">Classical</span
+              ><span class="tag">Flash Mobs</span>
+            </div>
+          </div>
+
+          <div class="club-card">
+            <div class="club-icon" style="background: #fff7ed; color: #ea580c">
+              <i class="fas fa-microphone-lines"></i>
+            </div>
+            <div class="club-name">Saptawara – Music Club</div>
+            <div class="club-desc">
+              Brings together music enthusiasts to explore vocal and instrumental talents. Organizes performances, jam sessions, and cultural events that celebrate musical creativity.
+            </div>
+            <div class="club-tags">
+              <span class="tag">Music</span><span class="tag">Performances</span
+              ><span class="tag">Events</span>
+            </div>
+          </div>
+
+          <div class="club-card">
+            <div class="club-icon" style="background: #f5f3ff; color: #7c3aed">
+              <i class="fas fa-person-chalkboard"></i>
+            </div>
+            <div class="club-name">Aadvika – Tech & Support Club</div>
+            <div class="club-desc">
+              Focused on technical assistance, event support, and digital innovation. Helps students develop practical skills while ensuring smooth execution of campus activities.
+            </div>
+            <div class="club-tags">
+              <span class="tag">Support</span><span class="tag">Innovation</span
+              >
+            </div>
+          </div>
+
+          <div class="club-card">
+            <div class="club-icon" style="background: #fef9c3; color: #a16207">
+              <i class="fas fa-football"></i>
+            </div>
+            <div class="club-name">Avishrutha – Sports Club</div>
+            <div class="club-desc">
+              Encourages physical fitness, teamwork, and sportsmanship through various athletic activities and competitions. Provides a platform for students to excel in sports and recreation.
+            </div>
+            <div class="club-tags">
+              <span class="tag">Sports</span><span class="tag">Teams</span
+              ><span class="tag">Fitness</span>
+            </div>
+          </div>
+
+          <div class="club-card">
+            <div class="club-icon" style="background: #ecfdf5; color: #059669">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <div class="club-name">Prachurya – Tech Club</div>
+            <div class="club-desc">
+              Dedicated to technology, innovation, and skill development in emerging fields. Organizes workshops, projects, and competitions to foster technical excellence and creativity.
+            </div>
+            <div class="club-tags">
+              <span class="tag">Technology</span
+              ><span class="tag">Skills</span>
+            </div>
+          </div>
+
+          <div class="club-card">
+            <div class="club-icon" style="background: #fff1f2; color: #e11d48">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="club-name">Student Council</div>
+            <div class="club-desc">
+              Represents the student community by promoting leadership, collaboration, and student welfare. Acts as a bridge between students and administration while organizing impactful campus initiatives.
+            </div>
+            <div class="club-tags">
+              <span class="tag">Committee</span><span class="tag">Student Body</span
+              ><span class="tag">Welfare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Join -->
+        <div class="fade-up" style="margin-top: 3rem">
+          <h3
+            style="
+              font-family: var(--font-display);
+              font-size: 1.3rem;
+              font-weight: 700;
+              margin-bottom: 1.5rem;
+              color: var(--gray-900);
+            "
+          >
+            How to Get Into a Club
+          </h3>
+          <div class="card-grid-4 fade-up">
+            <div class="card" style="text-align: center">
+              <div class="card-icon" style="margin: 0 auto 1rem">
+                <i class="fas fa-star"></i>
+              </div>
+              <h3>Club Fair</h3>
+              <p>
+                Attend the annual Club Fair held in the first two weeks of
+                semester. Visit every stall.
+              </p>
+            </div>
+            <div class="card" style="text-align: center">
+              <div class="card-icon" style="margin: 0 auto 1rem">
+                <i class="fas fa-file-signature"></i>
+              </div>
+              <h3>Register</h3>
+              <p>
+                Fill the interest form at the stall or online. Some clubs
+                require a selection round or interview.
+              </p>
+            </div>
+            <div class="card" style="text-align: center">
+              <div class="card-icon" style="margin: 0 auto 1rem">
+                <i class="fas fa-person-chalkboard"></i>
+              </div>
+              <h3>Induction</h3>
+              <p>
+                Shortlisted candidates attend an induction session. Show up
+                prepared and enthusiastic.
+              </p>
+            </div>
+            <div class="card" style="text-align: center">
+              <div class="card-icon" style="margin: 0 auto 1rem">
+                <i class="fas fa-medal"></i>
+              </div>
+              <h3>Contribute</h3>
+              <p>
+                Attend meetings, contribute to projects, and grow into
+                leadership roles by Year 2 or 3.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Club Finder Quiz -->
+        <div id="quiz" class="fade-up" style="margin-top: 3rem">
+          <h3
+            style="
+              font-family: var(--font-display);
+              font-size: 1.3rem;
+              font-weight: 700;
+              margin-bottom: 0.4rem;
+              color: var(--gray-900);
+            "
+          >
+            Club Finder
+          </h3>
+          <p
+            style="
+              font-size: 0.875rem;
+              color: var(--gray-400);
+              margin-bottom: 1.5rem;
+            "
+          >
+            Not sure which club to join? Answer one question and get a
+            recommendation.
+          </p>
+          <div class="quiz-wrap">
+            <div class="quiz-q" id="quizQuestion">
+              What excites you most about college?
+            </div>
+            <div class="quiz-options" id="quizOptions">
+              <button class="quiz-option" onclick="selectQuiz(this, 'tech')">
+                <i class="fas fa-code"></i> Building apps & solving problems
+              </button>
+              <button
+                class="quiz-option"
+                onclick="selectQuiz(this, 'security')"
+              >
+                <i class="fas fa-lock"></i> Hacking & cybersecurity
+              </button>
+              <button class="quiz-option" onclick="selectQuiz(this, 'design')">
+                <i class="fas fa-palette"></i> Design, art & creativity
+              </button>
+              <button class="quiz-option" onclick="selectQuiz(this, 'social')">
+                <i class="fas fa-comments"></i> Debating & meeting people
+              </button>
+              <button class="quiz-option" onclick="selectQuiz(this, 'culture')">
+                <i class="fas fa-music"></i> Music, dance & culture
+              </button>
+              <button class="quiz-option" onclick="selectQuiz(this, 'sports')">
+                <i class="fas fa-dumbbell"></i> Sports & physical activities
+              </button>
+            </div>
+            <div class="quiz-result" id="quizResult">
+              <div class="quiz-result-title" id="quizResultTitle"></div>
+              <div class="quiz-result-desc" id="quizResultDesc"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="campus-life" class="section">
+        <div class="section-inner">
+          
+
+          <h2 class="section-title">Campus Visual Tour</h2>
+
+          <p class="section-sub">
+            Explore the places you'll spend the next four years of your life.
+          </p>
+
+          <div class="tour-grid">
+            <div class="tour-card">
+              <img src="images/main-gate.jpg" alt="Main Gate" />
+              <h3>Main Entrance</h3>
+              <p>
+                Your first impression of Amrita Amaravati. Most orientation
+                activities begin here.
+              </p>
+            </div>
+
+            <div class="tour-card">
+              <img src="images/academic-block.jpg" alt="Academic Block" />
+              <h3>Academic Block</h3>
+              <p>Home to classrooms, faculty cabins, labs and lecture halls.</p>
+            </div>
+
+            <div class="tour-card">
+              <img src="images/library.jpg" alt="Library" />
+              <h3>Central Library</h3>
+              <p>
+                Quiet study zones, digital resources and research materials.
+              </p>
+            </div>
+
+            <div class="tour-card">
+              <img src="images/lab.jpg" alt="Labs" />
+              <h3>Computer Labs</h3>
+              <p>
+                Programming, AI, networking and software development practical
+                sessions.
+              </p>
+            </div>
+
+            <div class="tour-card">
+              <img src="images/hostel.jpg" alt="Hostel" />
+              <h3>Hostel Life</h3>
+              <p>
+                4 sharing rooms for boys with common bathrooms and 3 sharing rooms for girls with attached bathrooms
+              </p>
+            </div>
+
+            <div class="tour-card">
+              <img src="images/mess.jpg" alt="Mess" />
+              <h3>Mess & Dining</h3>
+              <p>Daily meals, snacks and conversations that become memories.</p>
+            </div>
+
+            <div class="tour-card">
+              <img src="images/sports.jpg" alt="Sports" />
+              <h3>Sports Complex</h3>
+              <p>
+                Football, cricket, basketball, gym facilities and tournaments.
+              </p>
+            </div>
+
+            
+
+            <div class="tour-card">
+              <img src="images/medical.jpg" alt="Medical Center" />
+              <h3>Medical Centre</h3>
+              <p>
+                Healthcare support and emergency assistance available on campus.
+              </p>
+            </div>
+
+            <div class="tour-card">
+              <img src="images/bus.jpg" alt="Transport" />
+              <h3>Transport</h3>
+              <p>
+                College buses and local transportation facilities for students.
+              </p>
+            </div>
+
+            
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ─── HOSTEL / CAMPUS LIFE ─── -->
+    <section id="hostel" class="section section-pink">
+      <div class="section-inner">
+        <div class="fade-up">
+          <h2 class="section-title">Campus & Hostel Life</h2>
+          <p class="section-sub">
+            Hostel life is a unique experience — part freedom, part
+            responsibility. Here's what your days will look like and how to make
+            the most of them.
+          </p>
+        </div>
+
+        <!-- First Month Timeline -->
+        <div class="fade-up" style="margin-bottom: 3rem">
+          <h3
+            style="
+              font-family: var(--font-display);
+              font-size: 1.2rem;
+              font-weight: 700;
+              color: var(--gray-900);
+              margin-bottom: 1.5rem;
+            "
+          >
+            Your First Month at College
+          </h3>
+          <div class="month-timeline">
+            <div class="week-block">
+              <div class="week-dot"><i class="fas fa-star"></i></div>
+              <div class="week-label">Week 1</div>
+              <div class="week-title">Orientation</div>
+              <ul class="week-items">
+                <li>ID card collection</li>
+                <li>Campus tour</li>
+                <li>Meet your faculty advisor</li>
+                <li>ERP registration</li>
+              </ul>
+            </div>
+            <div class="week-block">
+              <div class="week-dot"><i class="fas fa-users"></i></div>
+              <div class="week-label">Week 2</div>
+              <div class="week-title">Classes Begin</div>
+              <ul class="week-items">
+                <li>Timetable released</li>
+                <li>First lab sessions</li>
+                <li>Club fair attendance</li>
+                <li>Hostel settling in</li>
+              </ul>
+            </div>
+            <div class="week-block">
+              <div class="week-dot"><i class="fas fa-book"></i></div>
+              <div class="week-label">Week 3</div>
+              <div class="week-title">Find Your Rhythm</div>
+              <ul class="week-items">
+                <li>Join your club</li>
+                <li>Set study routines</li>
+                <li>Library card setup</li>
+                <li>First assignments due</li>
+              </ul>
+            </div>
+            <div class="week-block">
+              <div class="week-dot"><i class="fas fa-chart-line"></i></div>
+              <div class="week-label">Week 4</div>
+              <div class="week-title">Get Into Gear</div>
+              <ul class="week-items">
+                <li>First CIA announced</li>
+                <li>Project teams formed</li>
+                <li>Attendance check</li>
+                <li>Weekend explore</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily Routine + Facilities -->
+        <!-- Daily Routine + Facilities -->
+        <div class="info-row fade-up">
+          <!-- LEFT COLUMN -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem">
+            <!-- Timeline -->
+            <div class="info-block">
+              <h4><i class="fas fa-sun"></i> A Typical Day in Hostel</h4>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                  <div class="timeline-time">6:00 – 7:00 AM</div>
+                  <div class="timeline-event">Wake up & morning routine</div>
+                  <div class="timeline-detail">
+                    Mess opens at 7:15 AM for breakfast
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                  <div class="timeline-time">8:55 AM</div>
+                  <div class="timeline-event">First class begins</div>
+                  <div class="timeline-detail">
+                    Be in class 5 min early
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                  <div class="timeline-time">12:30 – 1:30 PM</div>
+                  <div class="timeline-event">Lunch break at mess</div>
+                  <div class="timeline-detail">
+                    Avoid skipping, energy matters for afternoon sessions
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                  <div class="timeline-time">1:30 – 5:00 PM</div>
+                  <div class="timeline-event">Afternoon classes / labs</div>
+                  <div class="timeline-detail">
+                    Lab slots usually in afternoon; 3-hour continuous block
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                  <div class="timeline-time">5:00 – 7:00 PM</div>
+                  <div class="timeline-event">
+                    Club activities / sports / personal time
+                  </div>
+                  <div class="timeline-detail">
+                    Use this time intentionally don't just scroll your phone
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                  <div class="timeline-time">7:30 – 10:00 PM</div>
+                  <div class="timeline-event">Self-study time</div>
+                  <div class="timeline-detail">
+                    Hostel study room; avoid studying on your bed
+                  </div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-circle"></i></div>
+                  <div class="timeline-time">10:30 PM</div>
+                  <div class="timeline-event">
+                    Lights out / curfew for freshers
+                  </div>
+                  <div class="timeline-detail">
+                    Hostel rules are enforced take them seriously
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Transport -->
+            <div class="info-block">
+              <h4><i class="fas fa-bus"></i> Transport & Getting Around</h4>
+
+              <ul class="info-list">
+                <li>
+                  <i class="fas fa-bus"></i> College buses available for day
+                  scholars from nearby areas
+                </li>
+
+                <li>
+                  <i class="fas fa-taxi"></i> Auto-rickshaws available near the
+                  main gate for local travel
+                </li>
+
+                <li>
+                  <i class="fas fa-train"></i> Vijayawada Railway Station (~30
+                  km)
+                </li>
+
+                <li>
+                  <i class="fas fa-plane"></i> Vijayawada International Airport
+                  (~35 km)
+                </li>
+
+                <li>
+                  <i class="fas fa-location-dot"></i> Amaravati city is
+                  developing carry some cash for local travel
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem">
+            <!-- Mess -->
+            <div class="info-block">
+              <h4><i class="fas fa-utensils"></i> Mess & Food</h4>
+
+              <div class="mess-timings">
+                <h5>Daily Mess Timings</h5>
+
+                <div class="timing-row">
+                  <span>Breakfast</span>
+                  <span>7:15 AM – 9:00 AM</span>
+                </div>
+
+                <div class="timing-row">
+                  <span>Lunch</span>
+                  <span>12:15 PM – 2:30 PM</span>
+                </div>
+
+                <div class="timing-row">
+                  <span>Evening Snacks</span>
+                  <span>5:15 PM – 5:45 PM</span>
+                </div>
+
+                <div class="timing-row">
+                  <span>Dinner</span>
+                  <span>7:15 PM – 9:00 PM</span>
+                </div>
+              </div>
+
+              <ul class="info-list" style="margin-top: 1rem">
+                <li>
+                  <i class="fas fa-circle-dot"></i> Three meals + evening snacks
+                  provided
+                </li>
+
+                <li>
+                  <i class="fas fa-circle-dot"></i> Monthly mess fee is
+                  mandatory for hostel students
+                </li>
+
+                <li>
+                  <i class="fas fa-circle-dot"></i> Special diet requests can be
+                  submitted to the mess committee
+                </li>
+
+                <li>
+                  <i class="fas fa-circle-dot"></i> Canteen & food stalls
+                  available within campus for variety
+                </li>
+
+                <li>
+                  <i class="fas fa-circle-dot"></i> Zomato / Swiggy delivery
+                  allowed up to the hostel gate
+                </li>
+              </ul>
+            </div>
+
+            <!-- Locations -->
+            <div class="info-block">
+              <h4><i class="fas fa-location-dot"></i> Key Campus Locations</h4>
+
+              <ul class="info-list">
+                <li>
+                  <i class="fas fa-circle-dot"></i> Admin Block — ID cards,
+                  certificates and fee payments
+                </li>
+
+                <li>
+                  <i class="fas fa-circle-dot"></i> Central Library — open till
+                  10 PM with quiet study zones
+                </li>
+
+                <li>
+                  <i class="fas fa-circle-dot"></i> Medical Centre — 24/7 first
+                  aid and basic consultation
+                </li>
+
+                <li>
+                  <i class="fas fa-circle-dot"></i> Sports Complex — gym, courts
+                  and football field
+                </li>
+
+                <li>
+                  <i class="fas fa-circle-dot"></i> ATM — located near the main
+                  hostel block
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SURVIVAL KIT ─── -->
+    <section id="survival" class="section">
+      <div class="section-inner">
+        <div class="fade-up">
+          
+          <h2 class="section-title">Survival Kit</h2>
+          <p class="section-sub">
+            Condensed wisdom from seniors who made every mistake so you don't
+            have to. Read this twice.
+          </p>
+        </div>
+
+        <!-- Do's and Don'ts -->
+        <div class="dos-donts fade-up">
+          <div class="dos-col">
+            <div class="dd-header">
+              <i class="fas fa-circle-check" style="color: #22c55e"></i> Things
+              Every Fresher Should Do
+            </div>
+            <ul class="dd-list">
+              <li>
+                <i class="fas fa-check"></i> Introduce yourself to your faculty
+                advisor in Week 1
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Keep a physical planner or digital
+                calendar for deadlines
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Explore Vijayawada and the
+                surroundings in your first month
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Start learning competitive
+                programming (LeetCode/Codeforces) from Sem 1
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Build one small project every
+                semester — portfolio matters for internships
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Attend every guest lecture and
+                seminar — even outside your domain
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Maintain a LinkedIn profile and
+                update it regularly
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Call home regularly — hostel life
+                can feel isolating initially
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Sleep 7–8 hours — pulling
+                all-nighters every week backfires
+              </li>
+            </ul>
+          </div>
+          <div class="donts-col">
+            <div class="dd-header">
+              <i class="fas fa-circle-xmark" style="color: #f43f5e"></i> Common
+              Mistakes to Avoid
+            </div>
+            <ul class="dd-list">
+              <li>
+                <i class="fas fa-xmark"></i> Don't skip the first week thinking
+                "nothing important happens"
+              </li>
+              <li>
+                <i class="fas fa-xmark"></i> Don't miss lab records deadlines —
+                they affect your CIA score directly
+              </li>
+              <li>
+                <i class="fas fa-xmark"></i> Don't spend the first month only
+                socialising with school friends
+              </li>
+              <li>
+                <i class="fas fa-xmark"></i> Don't ignore math subjects — they
+                appear in every technical subject
+              </li>
+              <li>
+                <i class="fas fa-xmark"></i> Don't borrow notes consistently —
+                you'll misunderstand concepts
+              </li>
+              <li>
+                <i class="fas fa-xmark"></i> Don't keep sensitive documents
+                (originals) in your hostel room
+              </li>
+              <li>
+                <i class="fas fa-xmark"></i> Don't wait till Year 3 to start
+                preparing for placements
+              </li>
+              <li>
+                <i class="fas fa-xmark"></i> Don't overcommit to too many clubs
+                in Semester 1 — depth over breadth
+              </li>
+              <li>
+                <i class="fas fa-xmark"></i> Don't ignore mental health — seek
+                support early, not after burnout
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Time Management -->
+        <div class="fade-up" style="margin-top: 2.5rem">
+          <h3
+            style="
+              font-family: var(--font-display);
+              font-size: 1.3rem;
+              font-weight: 700;
+              color: var(--gray-900);
+              margin-bottom: 0.4rem;
+            "
+          >
+            Time Management Framework
+          </h3>
+          <p
+            style="
+              font-size: 0.875rem;
+              color: var(--gray-400);
+              margin-bottom: 1.5rem;
+            "
+          >
+            How to divide your day across priorities without burning out.
+          </p>
+          <div class="card-grid-3 fade-up">
+            <div class="card">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 0.75rem;
+                "
+              >
+                <div class="card-icon" style="margin: 0">
+                  <i class="fas fa-book"></i>
+                </div>
+                <span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: var(--pink-500);
+                  "
+                  >40%</span
+                >
+              </div>
+              <h3>Academics</h3>
+              <p>
+                Classes, labs, self-study, and assignment preparation. Protect
+                this block — it's non-negotiable.
+              </p>
+            </div>
+            <div class="card">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 0.75rem;
+                "
+              >
+                <div class="card-icon" style="margin: 0">
+                  <i class="fas fa-users"></i>
+                </div>
+                <span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: var(--pink-500);
+                  "
+                  >25%</span
+                >
+              </div>
+              <h3>Clubs & Skills</h3>
+              <p>
+                Club meetings, side projects, competitive programming, and
+                workshops that build real-world capabilities.
+              </p>
+            </div>
+            <div class="card">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 0.75rem;
+                "
+              >
+                <div class="card-icon" style="margin: 0">
+                  <i class="fas fa-heart-pulse"></i>
+                </div>
+                <span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: var(--pink-500);
+                  "
+                  >35%</span
+                >
+              </div>
+              <h3>Rest & Recovery</h3>
+              <p>
+                Sleep, meals, sport, socializing, and simply doing nothing. You
+                cannot sustain output without recovery.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mental Health -->
+        <div
+          class="fade-up"
+          style="
+            margin-top: 2.5rem;
+            background: var(--pink-50);
+            border: 1px solid var(--pink-200);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+          "
+        >
+          <div style="display: flex; align-items: flex-start; gap: 1.25rem">
+            <div
+              class="card-icon"
+              style="background: var(--pink-500); color: white; flex-shrink: 0"
+            >
+              <i class="fas fa-brain"></i>
+            </div>
+            <div>
+              <h3
+                style="
+                  font-family: var(--font-display);
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  color: var(--gray-900);
+                  margin-bottom: 0.5rem;
+                "
+              >
+                Mental Health Matters
+              </h3>
+              <p
+                style="
+                  font-size: 0.9rem;
+                  color: var(--gray-600);
+                  line-height: 1.7;
+                  margin-bottom: 1rem;
+                "
+              >
+                Hostel life, academic pressure, and being away from home for the
+                first time is genuinely hard. Homesickness, anxiety, and
+                imposter syndrome are common — you are not alone. Amrita has a
+                Student Wellness Centre with trained counselors; use it without
+                stigma. Build a small group of trusted friends early. If
+                everything feels overwhelming, speak to your faculty advisor —
+                they've seen it all and are here to help.
+              </p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem">
+                <span class="chip pink"
+                  ><i class="fas fa-phone"></i> Student Wellness Centre — Block
+                  C, Ground Floor</span
+                >
+                <span class="chip pink"
+                  ><i class="fas fa-envelope"></i> wellness@am.amrita.edu</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TOOLS & RESOURCES ─── -->
+    <section id="tools" class="section section-alt">
+      <div class="section-inner">
+        <div class="fade-up">
+          <h2 class="section-title">Must-Have Tools & Resources</h2>
+          <p class="section-sub">
+            The apps, platforms, and websites every CSE student at Amrita should
+            have bookmarked and installed from Day 1.
+          </p>
+        </div>
+
+        <!-- College Portals -->
+        <p
+          style="
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+          "
+        >
+          College Portals — Know These Before Day 1
+        </p>
+        <div class="resource-grid fade-up" style="margin-bottom: 2.5rem">
+          <a href="#" class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: var(--pink-100); color: var(--pink-600)"
+            >
+              <i class="fas fa-server"></i>
+            </div>
+            <div>
+              <div class="resource-name">Amrita ERP</div>
+              <div class="resource-desc">
+                Attendance, marks, timetable, fees — your central hub
+              </div>
+            </div>
+          </a>
+          <a href="#" class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: #eff6ff; color: #2563eb"
+            >
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div>
+              <div class="resource-name">Amrita Online</div>
+              <div class="resource-desc">
+                Course materials, lecture notes, and e-learning content
+              </div>
+            </div>
+          </a>
+          <a href="#" class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: #f0fdf4; color: #16a34a"
+            >
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <div class="resource-name">Student Email</div>
+              <div class="resource-desc">
+                Official @am.amrita.edu account — check daily for notices
+              </div>
+            </div>
+          </a>
+          <a href="#" class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: #fff7ed; color: #ea580c"
+            >
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div>
+              <div class="resource-name">Library Portal</div>
+              <div class="resource-desc">
+                Book reservations, digital journals, and IEEE access
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Learning Platforms -->
+        <p
+          style="
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+          "
+        >
+          Learning Platforms Every CSE Student Should Use
+        </p>
+        <div class="resource-grid fade-up" style="margin-bottom: 2.5rem">
+          <a href="https://nptel.ac.in" target="_blank" class="resource-card">
+            <div class="resource-icon"><i class="fas fa-play-circle"></i></div>
+            <div>
+              <div class="resource-name">NPTEL</div>
+              <div class="resource-desc">
+                Free IIT courses; earn certifications recognised by Amrita
+              </div>
+            </div>
+          </a>
+          <a href="https://leetcode.com" target="_blank" class="resource-card">
+            <div class="resource-icon"><i class="fas fa-code"></i></div>
+            <div>
+              <div class="resource-name">LeetCode</div>
+              <div class="resource-desc">
+                DSA practice — essential for placement interviews from Year 2
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.geeksforgeeks.org"
+            target="_blank"
+            class="resource-card"
+          >
+            <div class="resource-icon"><i class="fas fa-terminal"></i></div>
+            <div>
+              <div class="resource-name">GeeksforGeeks</div>
+              <div class="resource-desc">
+                Concepts, interview prep, and subject notes for every topic
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://codeforces.com"
+            target="_blank"
+            class="resource-card"
+          >
+            <div class="resource-icon"><i class="fas fa-trophy"></i></div>
+            <div>
+              <div class="resource-name">Codeforces</div>
+              <div class="resource-desc">
+                Competitive programming contests — builds problem-solving speed
+              </div>
+            </div>
+          </a>
+          <a href="https://github.com" target="_blank" class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: var(--gray-100); color: var(--gray-700)"
+            >
+              <i class="fab fa-github"></i>
+            </div>
+            <div>
+              <div class="resource-name">GitHub</div>
+              <div class="resource-desc">
+                Version control and project hosting — your developer portfolio
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.coursera.org"
+            target="_blank"
+            class="resource-card"
+          >
+            <div
+              class="resource-icon"
+              style="background: #eff6ff; color: #2563eb"
+            >
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div>
+              <div class="resource-name">Coursera</div>
+              <div class="resource-desc">
+                Audit world-class courses for free; pay only for certificates
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://stackoverflow.com"
+            target="_blank"
+            class="resource-card"
+          >
+            <div
+              class="resource-icon"
+              style="background: #fff7ed; color: #ea580c"
+            >
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <div>
+              <div class="resource-name">Stack Overflow</div>
+              <div class="resource-desc">
+                Answer to every coding error you'll ever encounter
+              </div>
+            </div>
+          </a>
+          <a
+            href="https://www.kaggle.com"
+            target="_blank"
+            class="resource-card"
+          >
+            <div
+              class="resource-icon"
+              style="background: #eff6ff; color: #0369a1"
+            >
+              <i class="fas fa-database"></i>
+            </div>
+            <div>
+              <div class="resource-name">Kaggle</div>
+              <div class="resource-desc">
+                Datasets, ML competitions, and free GPU notebooks
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Essential Apps -->
+        <p
+          style="
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+          "
+        >
+          Apps & Dev Tools to Install on Day 1
+        </p>
+        <div class="resource-grid fade-up">
+          <div class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: #dbeafe; color: #1d4ed8"
+            >
+              <i class="fas fa-file-code"></i>
+            </div>
+            <div>
+              <div class="resource-name">VS Code</div>
+              <div class="resource-desc">
+                Industry-standard code editor with extensions for every language
+              </div>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: var(--gray-100); color: var(--gray-700)"
+            >
+              <i class="fab fa-git-alt"></i>
+            </div>
+            <div>
+              <div class="resource-name">Git</div>
+              <div class="resource-desc">
+                Version control is non-negotiable. Learn git init, commit, push.
+              </div>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: #f0fdf4; color: #16a34a"
+            >
+              <i class="fab fa-python"></i>
+            </div>
+            <div>
+              <div class="resource-name">Python 3</div>
+              <div class="resource-desc">
+                First programming language you'll use; install via python.org
+              </div>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: #fff1f2; color: #e11d48"
+            >
+              <i class="fas fa-note-sticky"></i>
+            </div>
+            <div>
+              <div class="resource-name">Notion</div>
+              <div class="resource-desc">
+                Notes, task management, and project planning — free for students
+              </div>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: #ede9fe; color: #6d28d9"
+            >
+              <i class="fas fa-diagram-project"></i>
+            </div>
+            <div>
+              <div class="resource-name">Figma</div>
+              <div class="resource-desc">
+                UI/UX design tool; free Education plan — useful across branches
+              </div>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: #dcfce7; color: #15803d"
+            >
+              <i class="fas fa-paper-plane"></i>
+            </div>
+            <div>
+              <div class="resource-name">Postman</div>
+              <div class="resource-desc">
+                API testing tool used in web development labs and projects
+              </div>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: #fef9c3; color: #a16207"
+            >
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div>
+              <div class="resource-name">Wolfram Alpha</div>
+              <div class="resource-desc">
+                Step-by-step solutions for mathematics — your calculus lifesaver
+              </div>
+            </div>
+          </div>
+          <div class="resource-card">
+            <div
+              class="resource-icon"
+              style="background: #fff7ed; color: #c2410c"
+            >
+              <i class="fas fa-box"></i>
+            </div>
+            <div>
+              <div class="resource-name">Docker (Year 2+)</div>
+              <div class="resource-desc">
+                Containerisation — start learning before your DevOps course hits
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FAQ ─── -->
+    <section id="faq" class="section">
+      <div class="section-inner">
+        <div class="fade-up">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-sub">
+            Real questions from real freshers. Answered honestly.
+          </p>
+        </div>
+
+        <div class="card-grid-2 fade-up">
+          <div>
+            <div class="faq-list">
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                  <span>What happens if my attendance drops below 75%?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                  You will be detained from writing the End Semester Exam (ESE)
+                  for that subject, which means an automatic fail. You must then
+                  reappear as an arrear candidate in the next semester, which
+                  delays your degree progress. Avoid this at all costs — missing
+                  even two weeks without justification can put you below the
+                  threshold.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                  <span>Can I change my branch after admission?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                  Yes, branch transfers are possible after the first semester,
+                  subject to seat availability and CGPA requirements. Generally,
+                  a CGPA above 9.0 is needed for competitive transfers (e.g., to
+                  CSE). Contact the academic office for the official process and
+                  deadlines.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                  <span
+                    >How competitive is it to get into a technical club?</span
+                  >
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                  It varies by club. Chakravyuha and CyberSec clubs have
+                  selection rounds including coding tests or aptitude questions.
+                  Design and cultural clubs are more accessible. The key is
+                  showing genuine enthusiasm and a basic understanding of the
+                  domain — you don't need to be an expert in your first year.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                  <span>When should I start preparing for placements?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                  Start in Semester 1 by building programming fundamentals and
+                  consistency. DSA practice (LeetCode) should become habitual by
+                  Year 2. By Year 3, you should have 2–3 projects, internship
+                  experience, and a strong GitHub profile. Campus placements
+                  happen in Year 4 Semester 1 — the prep timeline is longer than
+                  most freshers expect.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                  <span>Is ragging an issue at Amrita Amaravati?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                  Amrita has a strict zero-tolerance policy on ragging, backed
+                  by AICTE regulations. There is an Anti-Ragging Committee and a
+                  24/7 helpline. The campus culture is generally welcoming and
+                  collaborative. If you ever encounter inappropriate behaviour,
+                  report it immediately — the institution takes these complaints
+                  very seriously.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="faq-list">
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                  <span>Is Wi-Fi available in hostels?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                  Yes, campus-wide Wi-Fi is provided including in hostel blocks.
+                  However, speeds can be inconsistent during peak hours. Many
+                  students also maintain a personal data plan as backup. Certain
+                  sites may be restricted on the campus network — a standard
+                  practice at most Indian engineering colleges.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                  <span
+                    >What should I pack for hostel — mandatory and
+                    optional?</span
+                  >
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                  Mandatory: ID card, original certificates (keep copies with
+                  you, originals at home), personal medications, formal clothes
+                  for college (light formals or smart casuals), a basic
+                  stationery kit, and a laptop. Optional but useful: power bank,
+                  extension board, noise-cancelling earphones, a physical lock
+                  for your cupboard, and a water bottle.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                  <span>How does the NPTEL certification process work?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                  Amrita encourages and sometimes mandates NPTEL certifications
+                  for certain programs. You register on swayam.gov.in, follow
+                  weekly video lectures, submit assignments, and then appear for
+                  a proctored exam at a registered centre. Certificates are
+                  awarded based on combined assignment and exam scores. Elite
+                  certifications (above 90%) add significant weight to your
+                  resume.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                  <span>Can day scholars participate in club activities?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                  Absolutely. All clubs are open to both hostellers and day
+                  scholars. Evening club meetings (5–7 PM) are accessible to day
+                  scholars. The key is commitment — clubs expect regular
+                  attendance for their members regardless of accommodation
+                  status.
+                </div>
+              </div>
+              <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                  <span>What is the dress code at Amrita?</span>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-a">
+                  Amrita follows a formal dress code on campus. Boys typically
+                  wear full-sleeved shirts or formal trousers. Girls wear salwar
+                  kameez or formal western wear. Torn jeans, sleeveless tops,
+                  and overly casual clothing are discouraged in academic blocks.
+                  Lab sessions require formal attire and safety shoes for
+                  certain departments.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="download-guide">
+          <h3>Download Campus Compass</h3>
+
+          <p>
+            Want offline access to all this information? Download the complete
+            guide as a PDF.
+          </p>
+
+          <a href="CampusCompass.pdf" download class="btn-primary">
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">
+            <div class="footer-logo"><i class="fas fa-compass"></i></div>
+            <span class="footer-brand-text">Campus Compass</span>
+          </div>
+          <p class="footer-about">
+            A complete survival guide for freshers joining Amrita Vishwa
+            Vidyapeetham, Amaravati in July 2026. Built with care by seniors
+            who've been through it all — so you don't have to figure it out
+            alone.
+          </p>
+          <div
+            style="
+              margin-top: 1rem;
+              display: flex;
+              gap: 0.5rem;
+              align-items: center;
+              flex-wrap: wrap;
+            "
+          >
+            <span
+              style="
+                font-size: 0.78rem;
+                color: rgba(255, 255, 255, 0.3);
+                background: rgba(255, 255, 255, 0.05);
+                padding: 4px 10px;
+                border-radius: 100px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+              "
+              >Built by Chakravyuha Technical Club</span
+            >
+            <span
+              style="
+                font-size: 0.78rem;
+                color: rgba(255, 255, 255, 0.3);
+                background: rgba(255, 255, 255, 0.05);
+                padding: 4px 10px;
+                border-radius: 100px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+              "
+              >350+ Members</span
+            >
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Guide Sections</h5>
+          <ul>
+            <li><a href="#academics">Academic Life</a></li>
+            <li><a href="#clubs">Clubs & Extracurriculars</a></li>
+            <li><a href="#hostel">Campus & Hostel Life</a></li>
+            <li><a href="#survival">Survival Kit</a></li>
+            <li><a href="#tools">Tools & Resources</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li>
+              <a href="https://www.amrita.edu/campus/amaravati/" target="_blank"
+                >Amrita Amaravati Website</a
+              >
+            </li>
+            <li><a href="#" target="_blank">Amrita ERP Portal</a></li>
+            <li><a href="https://nptel.ac.in" target="_blank">NPTEL</a></li>
+            <li><a href="https://leetcode.com" target="_blank">LeetCode</a></li>
+            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="#">Chakravyuha Club Page</a></li>
+            <li><a href="mailto:chakravyuha@am.amrita.edu">Club Email</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Campus Compass 2026 · Amrita Vishwa Vidyapeetham, Amaravati</span>
+        <span>Built for the <span>Batch of 2026</span> with purpose.</span>
+      </div>
+    </footer>
+
+    <script>
+      // ─── MOBILE NAV ───
+      function toggleDrawer() {
+        document.getElementById("navDrawer").classList.toggle("open");
+      }
+      function closeDrawer() {
+        document.getElementById("navDrawer").classList.remove("open");
+      }
+
+      // ─── SCROLL ANIMATIONS ───
+      const fadeEls = document.querySelectorAll(".fade-up");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+      );
+      fadeEls.forEach((el) => observer.observe(el));
+
+      // Add stagger delays
+      document
+        .querySelectorAll(
+          ".card-grid-2 .card, .card-grid-3 .card, .card-grid-4 .card",
+        )
+        .forEach((el, i) => {
+          el.style.transitionDelay = (i % 4) * 0.08 + "s";
+        });
+
+      // ─── FAQ TOGGLE ───
+      function toggleFaq(btn) {
+        const item = btn.parentElement;
+        const wasOpen = item.classList.contains("open");
+        document
+          .querySelectorAll(".faq-item.open")
+          .forEach((i) => i.classList.remove("open"));
+        if (!wasOpen) item.classList.add("open");
+      }
+
+      // ─── CLUB QUIZ ───
+      const quizMap = {
+        tech: {
+          title: "Chakravyuha Technical Club",
+          desc: "You thrive on building and problem-solving. Chakravyuha is your home — hackathons, build challenges, and a strong community of developers and engineers await you.",
+        },
+        security: {
+          title: "CyberSec Club",
+          desc: "Your curiosity about how systems break makes you a natural fit for the cybersecurity community. CTF competitions and ethical hacking workshops will challenge and grow you rapidly.",
+        },
+        design: {
+          title: "Design & Creative Arts Club",
+          desc: "You see the world visually and creatively. The Design Club works on real UI/UX projects, event branding, and photography — perfect for someone who thinks aesthetically.",
+        },
+        social: {
+          title: "Debate & Literary Society",
+          desc: "Your strength is ideas and articulation. The Literary Society will sharpen your critical thinking through debates, Model UN, and public speaking — skills that pay dividends for life.",
+        },
+        culture: {
+          title: "Music & Cultural Club",
+          desc: "You bring energy and creativity to everything. The Cultural Club runs the biggest events on campus — a stage where your passion for performance truly shines.",
+        },
+        sports: {
+          title: "Sports Council",
+          desc: "You belong on the field. The Sports Council competes at university level across multiple disciplines and builds camaraderie that academic settings rarely can.",
+        },
+      };
+
+      function selectQuiz(btn, type) {
+        document
+          .querySelectorAll(".quiz-option")
+          .forEach((o) => o.classList.remove("selected"));
+        btn.classList.add("selected");
+        const result = quizMap[type];
+        document.getElementById("quizResultTitle").textContent =
+          "Recommended: " + result.title;
+        document.getElementById("quizResultDesc").textContent = result.desc;
+        document.getElementById("quizResult").classList.add("show");
+      }
+
+      const themeToggle = document.getElementById("themeToggle");
+
+      function setTheme(theme) {
+        if (theme === "dark") {
+          document.body.classList.add("dark");
+          themeToggle.innerHTML = "☀️";
+        } else {
+          document.body.classList.remove("dark");
+          themeToggle.innerHTML = "🌙";
+        }
+
+        localStorage.setItem("theme", theme);
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const isDark = document.body.classList.contains("dark");
+
+        setTheme(isDark ? "light" : "dark");
+      });
+
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme) {
+        setTheme(savedTheme);
+      }
+      // nav already has box-shadow via CSS
+    </script>
+  </body>
+</html>
